@@ -1,0 +1,2550 @@
+<!--
+JANELA PERSONALIZADA 2.0 © 2023
+Desenvolvido por Reynolds Costa, no Notepad++
+O uso é permitido; a comercialização, proibida.
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Janela Personalizada</title>
+		<link rel = "stylesheet" type = "text/css" href = "https://randompianist.github.io/documentacao.css" />
+		<link rel = "stylesheet" type = "text/css" href = "css/janelaPersonalizada2.0.css" />
+		<script type = "text/javascript" language = "JavaScript" src = "js/janelaPersonalizada2.0_main_mini.js"></script>
+		<script type = "text/javascript" language = "JavaScript" src = "js/janelaPersonalizada2.0_pref.js"></script>
+		<script type = "text/javascript" language = "JavaScript" src = "js/janelaPersonalizada2.0_func.js"></script>
+		<script type = "text/javascript" language = "JavaScript" src = "js/documentacao.js"></script>
+		<script type = "text/javascript" language = "JavaScript" src = "js/exemplo.js"></script>
+		<style type = "text/css">
+			h3 {
+				margin-top:23px
+			}
+			
+			hr {
+				margin-top:18px
+			}
+			
+			div.bloco {
+				margin-right:-3px
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td class = "vtop" style = "width:20%">
+					<div id = "menu_JP" style = "margin-left:-10px">
+						<ul>
+							<li>
+								<a class = "repo_link" href = "#item1">1. Introdução</a>
+							</li>
+							<li>
+								<a class = "repo_link" href = "#item2">2. Compatibilidade</a>
+							</li>
+							<li>
+								<a class = "repo_link" href = "#item3">3. Instalação</a>
+							</li>
+							<li>
+								<a class = "repo_link" href = "#item4">4. Utilização</a>
+								<ul>
+									<li>
+										<a class = "repo_link" href = "#item41">4.1. Objeto principal</a>
+									</li>
+									<li>
+										<a class = "repo_link" href = "#item42">4.2. Propriedades</a>
+										<ul>
+											<li>
+												<a class = "repo_link" href = "#item421">4.2.1. JP_mult</a>
+											</li>
+											<li>
+												<a class = "repo_link" href = "#item422">4.2.2. JP_pai</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a class = "repo_link" href = "#item43">4.3. Funções</a>
+										<ul>
+											<li>
+												<a class = "repo_link" href = "#item431">4.3.1. Módulos procedurais</a>
+												<ul>
+													<li>
+														<a class = "repo_link" href = "#item4311">4.3.1.1. Módulo criar</a>
+														<ul>
+															<li>
+																<a class = "repo_link" href = "#item43111">4.3.1.1.1. Função principal</a>
+															</li>
+															<li>
+																<a class = "repo_link" href = "#item43112">4.3.1.1.2. Função alerta</a>
+															</li>
+															<li>
+																<a class = "repo_link" href = "#item43113">4.3.1.1.3. Função confirma</a>
+															</li>
+															<li>
+																<a class = "repo_link" href = "#item43114">4.3.1.1.4. Função prompt</a>
+															</li>
+														</ul>
+													</li>
+													<li>
+														<a class = "repo_link" href = "#item4312">4.3.1.2. Módulo alterar</a>
+														<ul>
+															<li>
+																<a class = "repo_link" href = "#item43121">4.3.1.2.1. Função editar</a>
+															</li>
+															<li>
+																<a class = "repo_link" href = "#item43122">4.3.1.2.2. Função limparEdicoes</a>
+															</li>
+															<li>
+																<a class = "repo_link" href = "#item43123">4.3.1.2.3. Função botaoOnOff</a>
+															</li>
+														</ul>
+													</li>
+													<li>
+														<a class = "repo_link" href = "#item4313">4.3.1.3. Módulo manutencao</a>
+														<ul>
+															<li>
+																<a class = "repo_link" href = "#item43131">4.3.1.3.1. Função maxmin</a>
+															</li>
+															<li>
+																<a class = "repo_link" href = "#item43132">4.3.1.3.2. Função ativar</a>
+															</li>
+															<li>
+																<a class = "repo_link" href = "#item43133">4.3.1.3.3. Função fechar</a>
+															</li>
+															<li>
+																<a class = "repo_link" href = "#item43134">4.3.1.3.4. Função reabrir</a>
+															</li>
+														</ul>
+													</li>
+													<li>
+														<a class = "repo_link" href = "#item4314">4.3.1.4. Módulo recursos</a>
+														<ul>
+															<li>
+																<a class = "repo_link" href = "#item43141">4.3.1.4.1. Função botaoPadrao</a>
+															</li>
+															<li>
+																<a class = "repo_link" href = "#item43142">4.3.1.4.2. Função zIndex</a>
+															</li>
+															<li>
+																<a class = "repo_link" href = "#item43143">4.3.1.4.3. Função maxmin</a>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<a class = "repo_link" href = "#item432">4.3.2. Objeto das janelas</a>
+												<ul>
+													<li>
+														<a class = "repo_link" href = "#item4321">4.3.2.1. Módulo get</a>
+														<ul>
+															<li>
+																<a class = "repo_link" href = "#item43211">4.3.2.1.1. Função id</a>
+															</li>
+															<li>
+																<a class = "repo_link" href = "#item43212">4.3.2.1.2. Função zIndex</a>
+															</li>
+															<li>
+																<a class = "repo_link" href = "#item43213">4.3.2.1.3. Função maxmin</a>
+															</li>
+														</ul>
+													</li>
+													<li>
+														<a class = "repo_link" href = "#item4322">4.3.2.2. Módulo set</a>
+														<ul>
+															<li>
+																<a class = "repo_link" href = "#item43221">4.3.2.2.1. Função editar</a>
+															</li>
+															<li>
+																<a class = "repo_link" href = "#item43222">4.3.2.2.2. Função limparEdicoes</a>
+															</li>
+															<li>
+																<a class = "repo_link" href = "#item43223">4.3.2.2.3. Função botaoOnOff</a>
+															</li>
+															<li>
+																<a class = "repo_link" href = "#item43224">4.3.2.2.4. Função maxmin</a>
+															</li>
+															<li>
+																<a class = "repo_link" href = "#item43225">4.3.2.2.5. Função ativar</a>
+															</li>
+															<li>
+																<a class = "repo_link" href = "#item43226">4.3.2.2.6. Função fechar</a>
+															</li>
+															<li>
+																<a class = "repo_link" href = "#item43227">4.3.2.2.7. Função reabrir</a>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a class = "repo_link" href = "#item5">5. Palavras reservadas</a>
+							</li>
+							<li>
+								<a class = "repo_link" href = "#item6">6. Alterações</a>
+							</li>
+							<li>
+								<a class = "repo_link" href = "#item7">7. Agradecimentos</a>
+							</li>
+						</ul>
+					</div>
+				</td>
+				<td id = "principal">
+					<div class = "bloco" style = "margin-top:-3px">
+						<h1>
+							<a name = "item1">1. Introdução</a>
+						</h1>
+						<p>
+							<span>
+								================================
+								<br />
+								| NÃO COMERCIALIZE ESSE SCRIPT |
+								<br />
+								================================
+							</span>
+						</p>
+						<p>JANELA PERSONALIZADA 2.0, por Reynolds Costa</p>
+						<p>
+							Essa biblioteca tem a finalidade de simular os comandos
+							<span class = "JavaScript_funcao">alert</span>,
+							<span class = "JavaScript_funcao">cofirm</span>
+							e
+							<span class = "JavaScript_funcao">prompt</span>,
+							com uma estética melhorada, similar à do S.O. Windows, e com a possibilidade de inclusão de códigos HTML, trazendo, assim, a possibilidade de se trabalhar com páginas inteiras dentro de uma simples caixa de diálogo, usando apenas JavaScript puro.
+						</p>
+						<p>É possível criar janelas inteiras que simulam as janelas do S.O. Windows sem a utilização de bibliotecas adicionais como jQuery ou Bootstrap.</p>
+					</div>
+					<hr />
+					<div class = "bloco">
+						<h1>
+							<a name = "item2">2. Compatibilidade</a>
+						</h1>
+						<p>
+							Essa biblioteca permite o uso das bibliotecas previamente publicadas
+							<a href="https://github.com/RandomPianist/combinarTeclas" class="repo_link" target="_blank">combinarTeclas</a>,
+							sendo requerida a sua versão 2.0, e
+							<a href="https://github.com/RandomPianist/windowsLikeMenu" class="repo_link" target="_blank">windowsLikeMenu</a>,
+							sendo requerida a sua versão 1.1.
+						</p>
+						<p>
+							Note-se, contudo, que em nenhum dos casos dever-se-ão ser incluídos no projeto os arquivos terminados em %_func.js dessas bibliotecas, devendo
+							<span class = "arquivo">janelaPersonalizada2.0_func.js</span>
+							o único arquivo a ser utilizado.
+						</p>
+					</div>
+					<hr />
+					<div class = "bloco">
+						<h1>
+							<a name = "item3">3. Instalação</a>
+						</h1>
+						<p>
+							Essa biblioteca se baseia em um arquivo *.css e três arquivos *.js, todos disponíveis
+							<a href="https://github.com/RandomPianist/janelaPersonalizada" class="repo_link" target="_blank">no presente repositório</a>
+							nas pastas listadas no exemplo abaixo.
+						</p>
+						<p>A sua instalação deve se parecer com isso:</p>
+						<details>
+							<summary>Ver código</summary>
+							<div class = "codigo">
+								<div>
+									<p>
+										<span class = "HTML_tag">&#60;link</span>
+										<span class = "HTML_atributo">rel</span>
+										=
+										<span class = "texto">"stylesheet"</span>
+										<span class = "HTML_atributo">type</span>
+										=
+										<span class = "texto">"text/css"</span>
+										<span class = "HTML_atributo">href</span>
+										=
+										<span class = "arquivo">"css/janelaPersonalizada2.0.css"</span><span class = "HTML_tag">/&#62;</span>
+									</p>
+									<p>
+										<span class = "HTML_tag">&#60;script</span>
+										<span class = "HTML_atributo">type</span>
+										=
+										<span class = "texto">"text/javascript"</span>
+										<span class = "HTML_atributo">language</span>
+										=
+										<span class = "texto">"JavaScript"</span>
+										<span class = "HTML_atributo">src</span>
+										=
+										<span class = "arquivo">"js/janelaPersonalizada2.0_main_mini.js"</span><span class = "HTML_tag">&#62;</span><span class = "HTML_tag">&#60;/script&#62;</span>
+									</p>
+									<p>
+										<span class = "HTML_tag">&#60;script</span>
+										<span class = "HTML_atributo">type</span>
+										=
+										<span class = "texto">"text/javascript"</span>
+										<span class = "HTML_atributo">language</span>
+										=
+										<span class = "texto">"JavaScript"</span>
+										<span class = "HTML_atributo">src</span>
+										=
+										<span class = "arquivo">"js/janelaPersonalizada2.0_pref.js"</span><span class = "HTML_tag">&#62;</span><span class = "HTML_tag">&#60;/script&#62;</span>
+									</p>
+									<p>
+										<span class = "HTML_tag">&#60;script</span>
+										<span class = "HTML_atributo">type</span>
+										=
+										<span class = "texto">"text/javascript"</span>
+										<span class = "HTML_atributo">language</span>
+										=
+										<span class = "texto">"JavaScript"</span>
+										<span class = "HTML_atributo">src</span>
+										=
+										<span class = "arquivo">"js/janelaPersonalizada2.0_func.js"</span><span class = "HTML_tag">&#62;</span><span class = "HTML_tag">&#60;/script&#62;</span>
+									</p>
+								</div>
+							</div>
+						</details>
+						<p>
+							Não é necessário usar o arquivo
+							<span class = "arquivo">janelaPersonalizada2.0_main.js</span>,
+							mais pesado que sua contraparte minificada, disponível nesse repositório apenas para consulta e contribuição.
+						</p>
+					</div>
+					<hr />
+					<div class = "bloco">
+						<h1>
+							<a name = "item4">4. Utilização</a>
+						</h1>
+						<h3 style = "margin-top:0">
+							<a name = "item41">4.1. Objeto principal</a>
+						</h3>
+						<p>
+							O funcionamento dessa biblioteca se baseia em um objeto JSON principal
+							<span class = "variavel">JP_preferencias</span>
+							contido no arquivo
+							<span class = "arquivo">janelaPersonalizada2.0_pref.js</span>.
+						</p>
+						<p>
+							Quando não definidas, as propriedades das janelas criadas pela biblioteca herdarão seus valores desse objeto principal,
+							portanto a alteração de seus valores deve ser feita com cuidado, pois terá impacto no projeto inteiro,
+							e a alteração de suas chaves NUNCA deverá ser feita, pois isso provocará erros irreversíveis.
+						</p>
+						<p>
+							Considerando a importância desse objeto, é válido que o compreendamos antes de conhecermos as funções da biblioteca.
+							Suas chaves são declaradas como segue. Para obter mais informações sobre cada uma, basta clicar sobre ela.
+						</p>
+						<table class = "explicacao w100">
+							<tbody>
+								<tr>
+									<td class = "w100">
+										<div class = "codigo" id = "explicacao_codigo">
+											<div style = "overflow-x:scroll">
+												<p class = "sp_obj">
+													<span class = "JavaScript_reservado">let</span><span>&nbsp;</span><span class = "variavel">JP_preferencias</span><span>&nbsp;= {</span>
+												</p>
+												<p class = "nivel1 sp_obj-conteudo">
+													<span class = "atributo">conteudo</span><span>&nbsp;: {</span>
+												</p>
+												<p class = "nivel2 sp_obj-conteudo-cabecalho">
+													<span class = "atributo">cabecalho</span><span>&nbsp;: {</span>
+												</p>
+												<p class = "nivel3 sp_obj-conteudo-cabecalho-titulo">
+													<span class = "atributo">titulo</span><span>&nbsp;:&nbsp;</span><span class = "texto">"Nenhum título foi inserido"</span><span>,</span>
+												</p>
+												<p class = "nivel3 sp_obj-conteudo-cabecalho-botoes">
+													<span class = "atributo">botoes</span><span>&nbsp;: {</span>
+												</p>
+												<p class = "nivel4 sp_obj-conteudo-cabecalho-botoes-maximizar">
+													<span class = "atributo">maximizar</span><span>&nbsp;:&nbsp;</span><span class = "booleano">true</span><span>,</span>
+												</p>
+												<p class = "nivel4 sp_obj-conteudo-cabecalho-botoes-fechar">
+													<span class = "atributo">fechar</span><span>&nbsp;:&nbsp;</span><span class = "numero">-1</span>
+												</p>
+												<p class = "nivel3 sp_obj-conteudo-cabecalho-botoes">
+													<span>}</span>
+												</p>
+												<p class = "nivel2 sp_obj-conteudo-cabecalho">
+													<span>},</span>
+												</p>
+												<p class = "nivel2 sp_obj-conteudo-corpo">
+													<span class = "atributo">corpo</span><span>&nbsp;:</span>
+												</p>
+												<p class = "nivel3 sp_obj-conteudo-corpo">
+													<span class = "texto">"&#60;p&#62;Ocorreu um erro. Nenhum corpo foi escrito nessa janela.&#60;/p&#62;"</span><span>&nbsp;+</span>
+												</p>
+												<p class = "nivel3 sp_obj-conteudo-corpo">
+													<span class = "texto">"&#60;p&#62;"</span><span>&nbsp;+</span>
+												</p>
+												<p class = "nivel4 sp_obj-conteudo-corpo">
+													<span class = "texto">"Para escrever o corpo de uma janela, declare como argumento dessa função"</span><span>&nbsp;+</span>
+												</p>
+												<p class = "nivel4 sp_obj-conteudo-corpo">
+													<span class = "texto">"&#60;br&nbsp;/&#62;"</span><span>&nbsp;+</span>
+												</p>
+												<p class = "nivel4 sp_obj-conteudo-corpo">
+													<span class = "texto">"um objeto com a chave "</span><span>&nbsp;+</span>
+												</p>
+												<p class = "nivel4 sp_obj-conteudo-corpo">
+													<span class = "texto">"&#60;b&#62;conteudo&#60;/b&#62; "</span><span>&nbsp;+</span>
+												</p>
+												<p class = "nivel4 sp_obj-conteudo-corpo">
+													<span class = "texto">"e a subchave "</span><span>&nbsp;+</span>
+												</p>
+												<p class = "nivel4 sp_obj-conteudo-corpo">
+													<span class = "texto">"&#60;b&#62;corpo&#60;/b&#62;."</span><span>&nbsp;+</span>
+												</p>
+												<p class = "nivel3 sp_obj-conteudo-corpo">
+													<span class = "texto">"&#60;/p&#62;"</span><span>&nbsp;+</span>
+												</p>
+												<p class = "nivel3 sp_obj-conteudo-corpo">
+													<span class = "texto">"&#60;p&#62;"</span><span>&nbsp;+</span>
+												</p>
+												<p class = "nivel4 sp_obj-conteudo-corpo">
+													<span class = "texto">"O valor da chave "</span><span>&nbsp;+</span>
+												</p>
+												<p class = "nivel4 sp_obj-conteudo-corpo">
+													<span class = "texto">"&#60;b&#62;corpo&#60;/b&#62; "</span><span>&nbsp;+</span>
+												</p>
+												<p class = "nivel4 sp_obj-conteudo-corpo">
+													<span class = "texto">"deverá ser uma string."</span><span>&nbsp;+</span>
+												</p>
+												<p class = "nivel3 sp_obj-conteudo-corpo">
+													<span class = "texto">"&#60;/p&#62;"</span><span>,</span>
+												</p>
+												<p class = "nivel2 sp_obj-conteudo-botoes">
+													<span class = "atributo">botoes</span><span>&nbsp;: [</span>
+												</p>
+												<p class = "nivel3 sp_obj-conteudo-botoes-ok">
+													<span>{</span>
+												</p>
+												<p class = "nivel4 sp_obj-conteudo-botoes-ok">
+													<span class = "texto">"Ok"</span><span>&nbsp;: {</span>
+												</p>
+												<p class = "nivel5 sp_obj-conteudo-botoes-ok-funcao">
+													<span class = "atributo">funcao</span><span>&nbsp;:&nbsp;</span><span class = "JavaScript_reservado">function</span><span>() {</span>
+												</p>
+												<p class = "nivel6 sp_obj-conteudo-botoes-ok-funcao">
+													<span class = "variavel">JP</span><span>.</span><span class = "categoria">manutencao</span><span>.</span><span class = "lib_funcao">fechar</span><span>();</span>
+												</p>
+												<p class = "nivel5 sp_obj-conteudo-botoes-ok-funcao">
+													<span>},</span>
+												</p>
+												<p class = "nivel5 sp_obj-conteudo-botoes-ok-letra">
+													<span class = "atributo">letra</span><span>&nbsp;:&nbsp;</span><span class = "numero">-1</span><span>,</span>
+												</p>
+												<p class = "nivel5 sp_obj-conteudo-botoes-ok-descr">
+													<span class = "atributo">descr</span><span>&nbsp;:&nbsp;</span><span class = "texto">""</span><span>,</span>
+												</p>
+												<p class = "nivel5 sp_obj-conteudo-botoes-ok-ativo">
+													<span class = "atributo">ativo</span><span>&nbsp;:&nbsp;</span><span class = "booleano">true</span>
+												</p>
+												<p class = "nivel4 sp_obj-conteudo-botoes-ok">
+													<span>}</span>
+												</p>
+												<p class = "nivel3 sp_obj-conteudo-botoes-ok">
+													<span>}</span>
+												</p>
+												<p class = "nivel2 sp_obj-conteudo-botoes">
+													<span>],</span>
+												</p>
+												<p class = "nivel2 sp_obj-conteudo-botaoPadrao">
+													<span class = "atributo">botaoPadrao</span><span>&nbsp;:&nbsp;</span><span class = "numero">-1</span>
+												</p>
+												<p class = "nivel1 sp_obj-conteudo">
+													<span>},</span>
+												</p>
+												<p class = "nivel1 sp_obj-estilo">
+													<span class = "atributo">estilo</span><span>&nbsp;: {</span>
+												</p>
+												<p class = "nivel2 sp_obj-estilo-maximizar">
+													<span class = "atributo">maximizar</span><span>&nbsp;:&nbsp;</span><span class = "booleano">false</span><span>,</span>
+												</p>
+												<p class = "nivel2 sp_obj-estilo-branco">
+													<span class = "atributo">branco</span><span>&nbsp;:&nbsp;</span><span class = "booleano">true</span><span>,</span>
+												</p>
+												<p class = "nivel2 sp_obj-estilo-posicao">
+													<span class = "atributo">posicao</span><span>&nbsp;:&nbsp;</span><span class = "texto">"auto"</span><span>,</span>
+												</p>
+												<p class = "nivel2 sp_obj-estilo-dimensoes">
+													<span class = "atributo">dimensoes</span><span>&nbsp;: {</span>
+												</p>
+												<p class = "nivel3 sp_obj-estilo-dimensoes-altura">
+													<span class = "atributo">altura</span><span>&nbsp;:&nbsp;</span><span class = "numero">0</span><span>,</span>
+												</p>
+												<p class = "nivel3 sp_obj-estilo-dimensoes-largura">
+													<span class = "atributo">largura</span><span>&nbsp;:&nbsp;</span><span class = "numero">0</span>
+												</p>
+												<p class = "nivel2 sp_obj-estilo-dimensoes">
+													<span>}</span>
+												</p>
+												<p class = "nivel1 sp_obj-estilo">
+													<span>},</span>
+												</p>
+												<p class = "nivel1 sp_obj-config">
+													<span class = "atributo">config</span><span>&nbsp;: {</span>
+												</p>
+												<p class = "nivel2 sp_obj-config-mover">
+													<span class = "atributo">mover</span><span>&nbsp;:&nbsp;</span><span class = "booleano">true</span><span>,</span>
+												</p>
+												<p class = "nivel2 sp_obj-config-fechar">
+													<span class = "atributo">fechar</span><span>&nbsp;: {</span>
+												</p>
+												<p class = "nivel3 sp_obj-config-fechar-mouse">
+													<span class = "atributo">mouse</span><span>&nbsp;:&nbsp;</span><span class = "booleano">false</span><span>,</span>
+												</p>
+												<p class = "nivel3 sp_obj-config-fechar-teclado">
+													<span class = "atributo">teclado</span><span>&nbsp;:&nbsp;</span><span class = "booleano">true</span>
+												</p>
+												<p class = "nivel2 sp_obj-config-fechar">
+													<span>}</span>
+												</p>
+												<p class = "nivel1 sp_obj-config">
+													<span>}</span>
+												</p>
+												<p class = "sp_obj">
+													<span>}</span>
+												</p>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div id = "explicacao" style = "display:none">
+											<table>
+												<tr>
+													<td class = "explicacao_btn ant">
+														<button onclick = "navegar(-2)"><<</button>
+														&nbsp;
+														<button onclick = "navegar(-1)"><</button>
+													</td>
+													<td id = "explicacao_titulo" class = "w100" style = "
+														text-align:center;
+														font-size:18px
+													">Título</td>
+													<td class = "explicacao_btn prx">
+														<button onclick = "navegar(1)">></button>
+														&nbsp;
+														<button onclick = "navegar(2)">>></button>
+													</td>
+												</tr>
+												<tr>
+													<td colspan = 3>
+														<div id = "explicacao_texto" style = "
+															height:368px;
+															padding-right:15px
+														">
+															<div id = "sp_obj">
+																<p>Declaração do objeto.</p>
+															</div>
+															<div id = "sp_obj-conteudo">
+																<p>Declaração de sub-objeto.</p>
+															</div>
+															<div id = "sp_obj-conteudo-cabecalho">
+																<p>Declaração de sub-objeto.</p>
+															</div>
+															<div id = "sp_obj-conteudo-cabecalho-titulo">
+																<p>
+																	Título padrão das janelas, se não alterado pelos parâmetros declarados ao se utilizar as funções disponíveis no objeto
+																	<span class = "variavel">JP</span>.
+																</p>
+																<p>
+																	<b>Valor:</b>
+																	string sem tags HTML.
+																</p>
+															</div>
+															<div id = "sp_obj-conteudo-cabecalho-botoes">
+																<p>Declaração de sub-objeto.</p>
+															</div>
+															<div id = "sp_obj-conteudo-cabecalho-botoes-maximizar">
+																<p>Define se o cabeçalho terá o botão maximizar.</p>
+																<p>
+																	<b>Valor:</b>
+																	booleano.
+																</p>
+															</div>
+															<div id = "sp_obj-conteudo-cabecalho-botoes-fechar">
+																<p>Caso seja uma função, terá como gatilho o botão fechar no cabeçalho da janela.</p>
+																<p>Caso tenha qualquer valor que não seja uma função, excluirá do cabeçalho o botão fechar.</p>
+																<p>
+																	Nessa função,
+																	<b>NÃO</b>
+																	se deve escrever
+																	<span class = "variavel">JP</span><span>.</span><span class = "categoria">manutencao</span><span>.</span><span class = "lib_funcao">fechar</span><span>();</span>
+																	(ver
+																	<a class = "repo_link2" href = "#item43133">item 4.3.1.3.3</a>),
+																	pois a função naturalmente já fechará a janela, e escrever isso fará com que, caso haja mais de uma janela aberta, mais de uma janela seja fechada e, caso não, resultará em erro.
+																</p>
+																<p>
+																	<b>Valor:</b>
+																	função caso deseje o botão fechar, qualquer caso não deseje.
+																</p>
+															</div>
+															<div id = "sp_obj-conteudo-corpo">
+																<p>
+																	Corpo padrão das janelas, se não alterado pelos parâmetros declarados ao se utilizar as funções disponíveis no objeto
+																	<span class = "variavel">JP</span>.
+																</p>
+																<p>Não é recomendado alterá-lo nas preferências, posto que se, eventualmente, esse corpo for visto, significará um erro que poderá ser corrigido mais facilmente seguindo as instruções nele contidas.</p>
+																<p>
+																	<b>Valor:</b>
+																	string.
+																</p>
+															</div>
+															<div id = "sp_obj-conteudo-botoes">
+																<p>
+																	Declaração do sub-objeto
+																	<span class = "atributo">botoes</span>.
+																</p>
+																<p>
+																	É um vetor com os botões da janela. Caso não queira inserir nenhum botão, basta passar um vetor vazio.
+																</p>
+															</div>
+															<div id = "sp_obj-conteudo-botoes-ok">
+																<p>Criação de um botão.</p>
+																<p>
+																	Os botões das janelas têm como nome a legenda que terão (nesse caso,
+																	<span class = "texto">"Ok"</span>)
+																	e, por isso, não é possível a criação de botões com nomes iguais.
+																</p>
+																<p>
+																	A declaração de nenhum botão é obrigatória, mas, uma vez declarado, o botão precisa obrigatoriamente ter todos os atributos nele contidos (a saber,
+																	<span class = "atributo">funcao</span>,
+																	<span class = "atributo">ativo</span>,
+																	<span class = "atributo">letras</span>
+																	e
+																	<span class = "atributo">descr</span>),
+																	mais profundamente abordados na explicação de cada item respectivo.
+																</p>
+																<p>
+																	<b>Chave:</b>
+																	string.
+																</p>
+																<p>
+																	<b>Valor:</b>
+																	objeto.
+																</p>
+															</div>
+															<div id = "sp_obj-conteudo-botoes-ok-funcao">
+																<p>Função relativa ao botão.</p>
+																<p>
+																	Por padrão, todas as janelas terão um botão
+																	<span class = "texto">"Ok"</span>
+																	que fecha a janela.
+																<p>
+																	<b>Valor:</b>
+																	função.
+																</p>
+															</div>
+															<div id = "sp_obj-conteudo-botoes-ok-letra">
+																<p>Inteiro em base 0 relativo à string título do botão.</p>
+																<p>
+																	Quando
+																	<span class = "numero">0</span>
+																	ou mais, é o índice da letra no título do botão que será sublinhada ao se pressionar a tecla Alt. Se sublinhada, a letra se torna gatilho para a função do botão.
+																</p>
+																<p>
+																	Quando
+																	<span class = "numero">-1</span>,
+																	impossibilita essa característica e não sublinha letra alguma ao se pressionar Alt.
+																	Ainda será possível disparar a função do botão com o teclado ao se pressionar Enter caso ele esteja selecionado (as setas esquerda e direita servem para alternar a seleção entre botões ativos) e com o mouse ao se clicar nele.
+																</p>
+																<p>
+																	<b>Valor:</b>
+																	inteiro entre -1 e o tamanho do título do botão - 1
+																</p>
+															</div>
+															<div id = "sp_obj-conteudo-botoes-ok-descr">
+																<p>Descrição auxiliar que surgirá em uma caixa ao se mover o mouse pelo botão.</p>
+																<p>Caso vazia, não mostrará caixa alguma.</p>
+																<p>
+																	<b>Valor:</b>
+																	string sem tags HTML.
+																</p>
+															</div>
+															<div id = "sp_obj-conteudo-botoes-ok-ativo">
+																<p>Define se o botão estará ativo.</p>
+																<p>
+																	<b>Valor:</b>
+																	booleano.
+																</p>
+															</div>
+															<div id = "sp_obj-conteudo-botaoPadrao">
+																<p>Inteiro em base 0 relativo à quantidade de botões.</p>
+																<p>
+																	Quando
+																	<span class = "numero">0</span>
+																	ou mais, faz referência à posição do botão que iniciará selecionado.
+																</p>
+																<p>
+																	Quando
+																	<span class = "numero">-1</span>,
+																	impossibilita essa característica e não seleciona nenhum botão previamente.
+																	Ainda será possível selecionar um botão caso algum dos botões tenha o atributo
+																	<span class = "atributo">letra</span>
+																	maior que
+																	<span class = "numero">-1</span>.
+																<p>Não é possível selecionar como padrão nenhum botão que não esteja ativo e não é possível inativar nenhum botão padrão.</p>
+																<p>
+																	<b>Valor:</b>
+																	inteiro entre -1 e a quantidade de botões - 1, devendo ser diferente do índice de qualquer botão inativo.
+																</p>
+															</div>
+															<div id = "sp_obj-estilo">
+																<p>Declaração de sub-objeto.</p>
+															</div>
+															<div id = "sp_obj-estilo-maximizar">
+																<p>Define se a janela iniciará maximizada.</p>
+																<p>
+																	<b>Valor:</b>
+																	booleano.
+																</p>
+															</div>
+															<div id = "sp_obj-estilo-branco">
+																<p>Define se a janela terá o corpo destacado em branco ou se a cor do corpo será igual à da janela.</p>
+																<p>
+																	<b>Valor:</b>
+																	booleano.
+																</p>
+															</div>
+															<div id = "sp_obj-estilo-posicao">
+																<p>Define qual será a posição da janela.</p>
+																<p>Para esse atributo, há dois valores possíveis: uma string e um objeto.</p>
+																<p>
+																	Caso seja uma string, deverá ser igual a
+																	<span class = "texto">"auto"</span>.
+																	Nesse caso, a posição da janela dependerá da quantidade de janelas (que também tenham a posição
+																	<span class = "texto">"auto"</span>)
+																	abertas dentro da tela:
+																	a primeira janela ficará ao centro e as demais ficarão em posições aleatórias na tela, respeitando as bordas do conteúdo caso haja um menu (ver
+																	<a class = "repo_link2" href = "#item2">item 2</a>
+																	dessa documentação) ou da janela caso não haja.
+																</p>
+																<p>Caso seja um objeto, deverá possuir os seguintes atributos:</p>
+																<table class = "explicacao_menu w100" border = 1>
+																	<thead>
+																		<tr>
+																			<th>Chave</th>
+																			<th>Valores possíveis</th>
+																		</tr>
+																	</thead>
+																	<tbody>
+																		<tr>
+																			<td>horizontal</td>
+																			<td>
+																				<ul>
+																					<li>
+																						<span class = "texto">"esquerda"</span>
+																					</li>
+																					<li>
+																						<span class = "texto">"centro"</span>
+																					</li>
+																					<li>
+																						<span class = "texto">"direita"</span>
+																					</li>
+																				</ul>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td>vertical</td>
+																			<td>
+																				<ul>
+																					<li>
+																						<span class = "texto">"acima"</span>
+																					</li>
+																					<li>
+																						<span class = "texto">"centro"</span>
+																					</li>
+																					<li>
+																						<span class = "texto">"abaixo"</span>
+																					</li>
+																				</ul>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+																<p>
+																	Diferentemente do objeto dos botões, esse é um objeto opcional cujos atributos também são opcionais e, no caso da não-declaração de um deles, a janela obedecerá apenas ao parâmetro que foi declarado, se comportando, no outro, como
+																	<span class = "texto">"auto"</span>.
+																</p>
+																<p>Por exemplo, observe o seguinte trecho:</p>
+																<div class = "codigo" style = "border:none">
+																	<div>
+																		<p>
+																			<span class = "atributo">posicao</span>
+																			: {
+																		</p>
+																		<p class = "nivel1">
+																			<span class = "atributo">vertical</span>
+																			:
+																			<span class = "texto">"acima"</span>
+																		</p>
+																		<p>
+																			}
+																		</p>
+																	</div>
+																</div>
+																<p>
+																	No caso acima, a janela iniciará verticalmente acima e horizontalmente
+																	<ul>
+																		<li>
+																			no centro, caso não hajam janelas abertas com posição
+																			<span class = "texto">"auto"</span>.
+																		</li>
+																		<li>
+																			em posição aleatória, caso hajam janelas abertas com posição
+																			<span class = "texto">"auto"</span>.
+																		</li>
+																	</ul>
+																</p>
+																<p>
+																	<b>Valor:</b>
+																	string ou objeto.
+																</p>
+															</div>
+															<div id = "sp_obj-estilo-dimensoes">
+																<p>Declaração de sub-objeto.</p>
+															</div>
+															<div id = "sp_obj-estilo-dimensoes-altura">
+																<p>
+																	Altura da janela em pixels.
+																</p>
+																<p>
+																	Atribuir
+																	<span class = "numero">0</span>
+																	fará com que a janela assuma altura dinâmica.
+																</p>
+																<p>
+																	Atribuir números menores que
+																	<span class = "numero">150</span>
+																	e diferentes de
+																	<span class = "numero">0</span>
+																	será inefetivo.
+																</p>
+																<p>
+																	<b>Valor:</b>
+																	inteiro igual a 0 ou maior ou igual a 150.
+																</p>
+															</div>
+															<div id = "sp_obj-estilo-dimensoes-largura">
+																<p>
+																	Largura da janela em pixels.
+																</p>
+																<p>
+																	Atribuir
+																	<span class = "numero">0</span>
+																	fará com que a janela assuma largura dinâmica.
+																</p>
+																<p>
+																	Atribuir números menores que
+																	<span class = "numero">150</span>
+																	e diferentes de
+																	<span class = "numero">0</span>
+																	será inefetivo.
+																</p>
+																<p>
+																	<b>Valor:</b>
+																	inteiro igual a 0 ou maior ou igual a 150.
+																</p>
+															</div>
+															<div id = "sp_obj-config">
+																<p>Declaração de sub-objeto.</p>
+															</div>
+															<div id = "sp_obj-config-mover">
+																<p>Define se será possível mover a janela quando não maximizada.</p>
+																<p>
+																	<b>Valor:</b>
+																	booleano.
+																</p>
+															</div>
+															<div id = "sp_obj-config-fechar">
+																<p>Declaração de sub-objeto.</p>
+															</div>
+															<div id = "sp_obj-config-fechar-mouse">
+																<p>Quando verdadeiro, define como possível o fechamento da janela ao se clicar fora da área dela.</p>
+																<p>Quando falso, clicar fora da janela exibirá uma animação nas bordas e no cabeçalho.</p>
+																<p>
+																	<b>Valor:</b>
+																	booleano.
+																</p>
+															</div>
+															<div id = "sp_obj-config-fechar-teclado">
+																<p>Define se será possível fechar a janela pressionando Esc.</p>
+																<p>
+																	<b>Valor:</b>
+																	booleano.
+																</p>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<h3 style = "margin-top:10px">
+							<a name = "item42">4.2. Propriedades</a>
+						</h3>
+						<p style = "margin-bottom:20px">
+							Além do objeto
+							<span class = "variavel">JP_preferencias</span>,
+							o arquivo
+							<span class = "arquivo">janelaPersonalizada2.0_pref.js</span>
+							também é o lar de duas propriedades:
+							<span class = "variavel">JP_mult</span>
+							e
+							<span class = "variavel">JP_pai</span>.
+							Observemos suas definições.
+						</p>
+						<h3 class = "sub">
+							<a name = "item421">4.2.1. JP_mult</a>
+						</h3>
+						<p>
+							Booleano que, quando verdadeiro, permite que clicar sobre uma janela que esteja atrás na pilha de janelas tome a dianteira sobre suas irmãs.
+							Quando falso, animará ou fechará a primeira janela (para mais detalhes, veja o atributo
+							<span class = "atributo">mouse</span>
+							do item
+							<a href = "#item41" class = "repo_link2">4.1</a>) que estiver à frente.
+						</p>
+						<p>
+							Apesar de não ser uma constante, recomenda-se, para a facilitação no processo de debug, que a alteração dessa propriedade seja feita apenas uma vez e apenas em um lugar: o arquivo
+							<span class = "arquivo">janelaPersonalizada2.0_pref.js</span>.
+						</p>
+						<h3 class = "sub">
+							<a name = "item422">4.2.2. JP_pai</a>
+						</h3>
+						<p>
+							String que contém o id do elemento que conterá e restringirá as janelas.
+							Caso seja deixada em branco, as janelas poderão ser redimensionadas e movidas por todo o corpo do documento.
+						</p>
+						<p>
+							No presente documento, essa propriedade tem o valor
+							<span class = "texto">"principal"</span>,
+							que é o id da coluna desse texto, de modo que nenhuma janela pode ser movida para fora dela, isto é, entrar no menu.
+						</p>
+						<h3>
+							<a name = "item43">4.3. Funções</a>
+						</h3>
+						<h3 class = "sub">
+							<a name = "item431">4.3.1. Módulos procedurais</a>
+						</h3>
+						<p>
+							<b>
+								<a name = "item4311">4.3.1.1. Módulo criar</a>
+							</b>
+						</p>
+						<p>
+							Todas as funções desse módulo retornam um objeto que pode ser usado para orientar a si mesmo nas funções dos outros módulos, comumente chamadas de forma procedural. Para mais detalhes, veja o
+							<a href = "#item432" class = "repo_link2">item 4.3.2</a>.
+						</p>
+						<p>
+							<i>
+								<a name = "item43111">4.3.1.1.1. Função principal</a>
+							</i>
+						</p>
+						<div class = "codigo-inline">
+							A função
+							<div>
+								<span class = "variavel">JP</span><span>.</span><span class = "categoria">criar</span><span>.</span><span class = "lib_funcao">principal</span><span>(</span><span class = "parametro">obj</span><span>)</span>
+							</div>
+							é a mais importante desse módulo no quesito técnico, e, no quesito conceitual, é a mais importante de toda a biblioteca.
+							Ela cria uma janela. Todas as funções do módulo
+							<span class = "categoria">criar</span>
+							a utilizam, motivo pelo qual a examinamos primeiro.
+						</div>
+						<table class = "explicacao_menu w100" border = 1>
+							<thead>
+								<tr>
+									<th>Parâmetro</th>
+									<th>Tipo</th>
+									<th>Descrição</th>
+									<th>Obrigatório</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>obj</td>
+									<td>objeto</td>
+									<td>
+										Objeto estruturado de acordo com o descrito no
+										<a class = "repo_link2" href = "#item41">item 4.1</a>.
+									</td>
+									<td>SIM</td>
+								</tr>
+							</tbody>
+						</table>
+						<p>
+							Embora sua declaração seja obrigatória, todas as chaves do parâmetro
+							<span class = "parametro">obj</span>
+							são opcionais.
+							Ele pode receber, inclusive, um novo parâmetro, igualmente opcional, chamado
+							<span class = "atributo">id</span>, conforme abaixo:
+						</p>
+						<details>
+							<summary>Ver código</summary>
+							<div class = "codigo">
+								<div>
+									<p>
+										{
+									</p>
+									<p class = "nivel1">
+										<span class = "atributo">id</span>
+										:
+										<span class = "texto">"minha-janela"</span>,
+										<span class = "comentario">// STRING
+									</p>
+									<p class = "nivel1">
+										<span class = "atributo">conteudo</span>
+										: {
+									</p>
+									<p class = "nivel2">
+										<span class = "comentario">// CONTEÚDO DA JANELA
+									</p>
+									<p class = "nivel1">
+										},
+									</p>
+									<p class = "nivel1">
+										<span class = "atributo">estilo</span>
+										: {
+									</p>
+									<p class = "nivel2">
+										<span class = "comentario">// ESTILO DA JANELA
+									</p>
+									<p class = "nivel1">
+										},
+									</p>
+									<p class = "nivel1">
+										<span class = "atributo">config</span>
+										: {
+									</p>
+									<p class = "nivel2">
+										<span class = "comentario">// CONFIGURAÇÕES DA JANELA
+									</p>
+									<p class = "nivel1">
+										}
+									</p>
+									<p>
+										}
+									</p>
+								</div>
+							</div>
+						</details>
+						<p>
+							Esse id será o identificador da janela no elemento HTML.
+							Para evitar a construção de elementos com mesmo id, esse identificador é acrescido de um número sequencial.
+							O código acima, por exemplo, se inserido como parâmetro da função mencionada e não houverem outras janelas com mesmo id, criará uma janela chamada
+							<span class = "texto">"minha-janela1"</span>.
+							A próxima janela criada com esse código se chamará
+							<span class = "texto">"minha-janela2"</span>
+							e assim por diante.
+							Se omitida, a chave
+							<span class = "atributo">id</span>
+							assumirá o valor
+							<span class = "texto">"janela"</span>.
+							Para obter o nome completo da janela, com o numeral, utilize o objeto retornado quando da sua criação. Para mais detalhes, veja o
+							<a href = "#item4321">item 4.3.2.1</a>.
+						</p>
+						<p>
+							Veja essa função em funcionamento:
+							<button onclick = "exemplo43111()">Exemplo</button>
+						</p>
+						<p>A função do botão acima cria uma janela que inicia maximizada contendo um vídeo. Observe o código desse exemplo:</p>
+						<details>
+							<summary>Ver código</summary>
+							<div class = "codigo">
+								<div>
+									<p>
+										<span class = "variavel">JP</span>.<span class = "categoria">criar</span>.<span class = "lib_funcao">principal</span>({
+									</p>
+									<p class = "nivel1">
+										<span class = "atributo">conteudo</span>
+										: {
+									</p>
+									<p class = "nivel2">
+										<span class = "atributo">cabecalho</span>
+										: {
+									</p>
+									<p class = "nivel3">
+										<span class = "atributo">titulo</span>
+										:
+										<span class = "texto">"Vídeo"</span>
+									</p>
+									<p class = "nivel3">
+										<span class = "atributo">botoes</span>
+										: {
+									</p>
+									<p class = "nivel4">
+										<span class = "atributo">fechar</span>
+										:
+										<span class = "JavaScript_reservado">function</span>()
+										{ }
+									</p>
+									<p class = "nivel3">
+										}
+									</p>
+									<p class = "nivel2">
+										},
+									</p>
+									<p class = "nivel2">
+										<span class = "atributo">corpo</span>
+										:
+									</p>
+									<p class = "nivel3">
+										<span class = "texto">"&#60;iframe&nbsp"</span>
+										+
+									</p>
+									<p class = "nivel4">
+										<span class = "texto">"src&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;'https://www.youtube.com/embed/ioOHXl-xhc4?si=s2BFOXlJz7PogdRY&amp;controls=0'"</span>
+										+
+									</p>
+									<p class = "nivel4">
+										<span class = "texto">"title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;'YouTube video player'"</span>
+										+
+									</p>
+									<p class = "nivel4">
+										<span class = "texto">"frameborder&nbsp;=&nbsp;'0'"</span>
+										+
+									</p>
+									<p class = "nivel4">
+										<span class = "texto">"style&nbsp;=&nbsp;'"</span>
+										+
+									</p>
+									<p class = "nivel5">
+										<span class = "texto">"width:100%;"</span>
+										+
+									</p>
+									<p class = "nivel5">
+										<span class = "texto">"height:98%"</span>
+										+
+									</p>
+									<p class = "nivel4">
+										<span class = "texto">"'"</span>
+										+
+									</p>
+									<p class = "nivel4">
+										<span class = "texto">"allow&nbsp;=&nbsp;'"</span>
+										+
+									</p>
+									<p class = "nivel5">
+										<span class = "texto">"accelerometer; "</span>
+										+
+									</p>
+									<p class = "nivel5">
+										<span class = "texto">"autoplay; "</span>
+										+
+									</p>
+									<p class = "nivel5">
+										<span class = "texto">"clipboard-write; "</span>
+										+
+									</p>
+									<p class = "nivel5">
+										<span class = "texto">"encrypted-media; "</span>
+										+
+									</p>
+									<p class = "nivel5">
+										<span class = "texto">"gyroscope; "</span>
+										+
+									</p>
+									<p class = "nivel5">
+										<span class = "texto">"picture-in-picture; "</span>
+										+
+									</p>
+									<p class = "nivel5">
+										<span class = "texto">"web-share; "</span>
+										+
+									</p>
+									<p class = "nivel4">
+										<span class = "texto">"' allowfullscreen"</span>
+										+
+									</p>
+									<p class = "nivel3">
+										<span class = "texto">"&#62;&#60;/iframe&#62;"</span>
+									</p>
+									<p class = "nivel1">
+										},
+									</p>
+									<p class = "nivel1">
+										<span class = "atributo">estilo</span>
+										: {
+									</p>
+									<p class = "nivel2">
+										<span class = "atributo">maximizar</span>
+										:
+										<span class = "booleano">true</span>
+									</p>
+									<p class = "nivel1">
+										}
+									</p>
+									<p>
+										}
+									</p>
+								</div>
+							</div>
+						</details>
+						<p>
+							<i>
+								<a name = "item43112">4.3.1.1.2. Função alerta</a>
+							</i>
+						</p>
+						<div class = "codigo-inline">
+							A função
+							<div>
+								<span class = "variavel">JP</span><span>.</span><span class = "categoria">criar</span><span>.</span><span class = "lib_funcao">alerta</span><span>(</span><span class = "parametro">_conteudo</span><span>,&nbsp;</span><span class = "parametro">_titulo</span><span>,&nbsp;</span><span class = "parametro">callback</span><span>)</span>,
+							</div>
+							mantida da versão anterior dessa biblioteca, cria uma janela de alerta.
+							É análoga à função
+							<span class = "JavaScript_funcao">alert</span>,
+							porém com mais espaço para possibilidades.
+						</div>
+						<table class = "explicacao_menu w100" border = 1>
+							<thead>
+								<tr>
+									<th>Parâmetro</th>
+									<th>Tipo</th>
+									<th>Descrição</th>
+									<th>Obrigatório</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>_conteudo</td>
+									<td>string</td>
+									<td>
+										Conteúdo da janela.
+										<br />
+										Se não definido, assume
+										<span class = "texto">"undefined"</span>.
+									</td>
+									<td>NÃO</td>
+								</tr>
+								<tr>
+									<td>_titulo</td>
+									<td>string</td>
+									<td>
+										Título da janela.
+										<br />
+										Se não definido ou deixado em branco, assume
+										<span class = "texto">"Aviso"</span>.
+									</td>
+									<td>NÃO</td>
+								</tr>
+								<tr>
+									<td>callback</td>
+									<td>função</td>
+									<td>Função que é executada ao se clicar em "Ok" ou fechar a janela.</td>
+									<td>NÃO</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class = "codigo-inline">
+							Por definição, independentemente das preferências definidas no arquivo
+							<span class = "arquivo">janelaPersonalizada2.0_pref.js</span>, as janelas criadas pela função
+							<div>
+								<span class = "variavel">JP</span><span>.</span><span class = "categoria">criar</span><span>.</span><span class = "lib_funcao">alerta</span><span>(</span><span class = "parametro">_conteudo</span><span>,&nbsp;</span><span class = "parametro">_titulo</span><span>,&nbsp;</span><span class = "parametro">callback</span><span>)</span>
+							</div>
+						</div>
+						<ul>
+							<li>não podem ser e não iniciam como maximizadas;</li>
+							<li>possuem um botão fechar;</li>
+							<li>
+								podem ser fechadas com o mouse, mas não com o teclado (ver atributo
+								<span class = "atributo">config</span><span>.</span><span class = "atributo">fechar</span>
+								do
+								<a href = "#item41" class = "repo_link2">item 4.1</a>);
+							</li>
+							<li>
+								possuem um botão Ok pré-selecionado que fecha a janela e executa a função do parâmetro
+								<span class = "parametro">callback</span>,
+								se declarado.
+							</li>
+						</ul>
+						<p>
+							Para alterar essas propriedades, será necessário trocar na instalação o arquivo
+							<span class = "arquivo">janelaPersonalizada2.0_main_mini.js</span>
+							por sua contraparte não-minificada,
+							<span class = "arquivo">janelaPersonalizada2.0_main.js</span>,
+							e alterá-las manualmente, mas isso não é recomendado.
+						</p>
+						<p>
+							O botão ao lado cria uma janela de alerta:
+							<button onclick = "exemplo43112_1()">Exemplo</button>
+						</p>
+						<details>
+							<summary>Ver código</summary>
+							<div class = "codigo">
+								<div>
+									<p>
+										<span class = "variavel">JP</span>.<span class = "categoria">criar</span>.<span class = "lib_funcao">alerta</span>(<span class = "texto">"Olá, mundo!"</span>);
+									</p>
+								</div>
+							</div>
+						</details>
+						<p>
+							O botão ao lado cria um alerta que avisa no console quando for fechado:
+							<button onclick = "exemplo43112_2()">Exemplo</button>
+						</p>
+						<details>
+							<summary>Ver código</summary>
+							<div class = "codigo">
+								<div>
+									<p>
+										<span class = "variavel">JP</span>.<span class = "categoria">criar</span>.<span class = "lib_funcao">alerta</span>(<span class = "texto">"Olá, mundo!"</span>,
+										<span class = "texto">""</span>,
+										<span class = "JavaScript_reservado">function</span>() {
+									</p>
+									<p class = "nivel1">
+										<span class = "variavel">console</span>.<span class = "JavaScript_funcao">log</span>(<span class = "texto">"Fui fechado"</span>);
+									</p>
+									<p>
+										}
+									</p>
+								</div>
+							</div>
+						</details>
+						<p>
+							<i>
+								<a name = "item43113">4.3.1.1.3. Função confirma</a>
+							</i>
+						</p>
+						<div class = "codigo-inline">
+							A função
+							<div>
+								<span class = "variavel">JP</span><span>.</span><span class = "categoria">criar</span><span>.</span><span class = "lib_funcao">confirma</span><span>(</span><span class = "parametro">_conteudo</span><span>,&nbsp;</span><span class = "parametro">_titulo</span><span>,&nbsp;</span><span class = "parametro">cancelar</span><span>,&nbsp;</span><span class = "parametro">callback</span><span>,&nbsp;</span><span class = "parametro">padrao</span><span>)</span>,
+							</div>
+							mantida da versão anterior dessa biblioteca, cria uma janela de confirmação.
+							É análoga à função
+							<span class = "JavaScript_funcao">confirm</span>,
+							porém com mais espaço para possibilidades.
+						</div>
+						<table class = "explicacao_menu w100" border = 1>
+							<thead>
+								<tr>
+									<th>Parâmetro</th>
+									<th>Tipo</th>
+									<th>Descrição</th>
+									<th>Obrigatório</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>_conteudo</td>
+									<td>string</td>
+									<td>Conteúdo da janela</td>
+									<td>SIM</td>
+								</tr>
+								<tr>
+									<td>_titulo</td>
+									<td>string</td>
+									<td>
+										Título da janela.
+										<br />
+										Se deixado em branco, assume
+										<span class = "texto">"Confirmar"</span>.
+									</td>
+									<td>SIM</td>
+								</tr>
+								<tr>
+									<td>cancelar</td>
+									<td>booleano</td>
+									<td>
+										Verdadeiro caso se deseje na janela, além dos botões Sim e Não, um botão Cancelar; falso caso contrário.
+										<br />
+										Se verdadeiro, também adicionará um botão fechar ao cabeçalho, que enviará a mesma resposta do botão Cancelar.
+									</td>
+									<td>SIM</td>
+								</tr>
+								<tr>
+									<td>callback</td>
+									<td>função</td>
+									<td>
+										Função que é executada ao se clicar em qualquer dos botões ou fechar a janela.
+										<br />
+										Retorna como parâmetro
+										<ul>
+											<li>
+												<span class = "numero">1</span>
+												ao se clicar em Sim;
+											</li>
+											<li>
+												<span class = "numero">0</span>
+												ao se clicar em Não;
+											</li>
+											<li>
+												<span class = "numero">-1</span>
+												ao se clicar em Cancelar ou fechar a janela.
+											</li>
+										</ul>
+									</td>
+									<td>SIM</td>
+								</tr>
+								<tr>
+									<td>padrao</td>
+									<td>inteiro</td>
+									<td>
+										Índice do botão padrão da janela.
+										<br />
+										É um inteiro entre 0 e 2 caso haja o botão Cancelar ou inteiro entre 0 e 1 caso não haja.
+										<br />
+										Tem sua função descrita no atributo
+										<span class = "atributo">botaoPadrao</span>
+										documentado no
+										<a href = "#item41" class = "repo_link2">item 4.1</a>.
+										<br />
+										Se não definido, assume
+										<span class = "numero">0</span>.
+									</td>
+									<td>NÃO</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class = "codigo-inline">
+							Por definição, independentemente das preferências definidas no arquivo
+							<span class = "arquivo">janelaPersonalizada2.0_pref.js</span>, as janelas criadas pela função
+							<div>
+								<span class = "variavel">JP</span><span>.</span><span class = "categoria">criar</span><span>.</span><span class = "lib_funcao">confirma</span><span>(</span><span class = "parametro">_conteudo</span><span>,&nbsp;</span><span class = "parametro">_titulo</span><span>,&nbsp;</span><span class = "parametro">cancelar</span><span>,&nbsp;</span><span class = "parametro">callback</span><span>,&nbsp;</span><span class = "parametro">padrao</span><span>)</span>
+							</div>
+						</div>
+						<ul>
+							<li>não podem ser e não iniciam como maximizadas;</li>
+							<li>
+								podem ser fechadas com o teclado se o parâmetro
+								<span class = "parametro">cancelar</span> for verdadeiro, mas nunca com o mouse (ver atributo
+								<span class = "atributo">config</span><span>.</span><span class = "atributo">fechar</span>
+								do
+								<a href = "#item41" class = "repo_link2">item 4.1</a>);
+							</li>
+						</ul>
+						<p>
+							Para alterar essas propriedades, será necessário trocar na instalação o arquivo
+							<span class = "arquivo">janelaPersonalizada2.0_main_mini.js</span>
+							por sua contraparte não-minificada,
+							<span class = "arquivo">janelaPersonalizada2.0_main.js</span>,
+							e alterá-las manualmente, mas isso não é recomendado.
+						</p>
+						<p>
+							O botão ao lado cria uma janela de confirmação:
+							<button onclick = "exemplo43113()">Exemplo</button>
+						</p>
+						<details>
+							<summary>Ver código</summary>
+							<div class = "codigo">
+								<div>
+									<p>
+										<span class = "variavel">JP</span>.<span class = "categoria">criar</span>.<span class = "lib_funcao">confirma</span>(<span class = "texto">"Deseja continuar?"</span>,
+										<span class = "texto">""</span>,
+										<span class = "booleano">true</span>,
+										<span class = "JavaScript_reservado">function</span>(<span class = "parametro">resp</span>) {
+									</p>
+									<p class = "nivel1">
+										<span class = "JavaScript_reservado">switch</span>(<span class = "parametro">resp</span>) {
+									</p>
+									<p class = "nivel2">
+										<span class = "JavaScript_reservado">case</span>
+										<span class = "numero">1</span>:
+									</p>
+									<p class = "nivel3">
+										<span class = "variavel">JP</span>.<span class = "categoria">criar</span>.<span class = "lib_funcao">alerta</span>(<span class = "texto">"Sim"</span>);
+									</p>
+									<p class = "nivel3">
+										<span class = "JavaScript_reservado">break</span>;
+									</p>
+									<p class = "nivel2">
+										<span class = "JavaScript_reservado">case</span>
+										<span class = "numero">0</span>:
+									</p>
+									<p class = "nivel3">
+										<span class = "variavel">JP</span>.<span class = "categoria">criar</span>.<span class = "lib_funcao">alerta</span>(<span class = "texto">"Não"</span>);
+									</p>
+									<p class = "nivel3">
+										<span class = "JavaScript_reservado">break</span>;
+									</p>
+									<p class = "nivel2">
+										<span class = "JavaScript_reservado">case</span>
+										<span class = "numero">-1</span>:
+									</p>
+									<p class = "nivel3">
+										<span class = "variavel">JP</span>.<span class = "categoria">criar</span>.<span class = "lib_funcao">alerta</span>(<span class = "texto">"Cancelou"</span>);
+									</p>
+									<p class = "nivel3">
+										<span class = "JavaScript_reservado">break</span>;
+									</p>
+									<p class = "nivel1">
+										}
+									</p>
+									<p>
+										}
+									</p>
+								<div>
+							</div>
+						</details>
+						<p>
+							<i>
+								<a name = "item43114">4.3.1.1.4. Função prompt</a>
+							</i>
+						</p>
+						<div class = "codigo-inline">
+							A função
+							<div>
+								<span class = "variavel">JP</span><span>.</span><span class = "categoria">criar</span><span>.</span><span class = "lib_funcao">prompt</span><span>(</span><span class = "parametro">_conteudo</span><span>,&nbsp;</span><span class = "parametro">placeholder</span><span>,&nbsp;</span><span class = "parametro">_titulo</span><span>,&nbsp;</span><span class = "parametro">cancelar</span><span>,&nbsp;</span><span class = "parametro">validar</span><span>,&nbsp;</span><span class = "parametro">callback</span><span>,&nbsp;</span><span class = "parametro">padrao</span><span>)</span>,
+							</div>
+							mantida da versão anterior dessa biblioteca, cria uma janela de confirmação.
+							É análoga à função homônima, porém com mais espaço para possibilidades.
+						</div>
+						<table class = "explicacao_menu w100" border = 1>
+							<thead>
+								<tr>
+									<th>Parâmetro</th>
+									<th>Tipo</th>
+									<th>Descrição</th>
+									<th>Obrigatório</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>_conteudo</td>
+									<td>string</td>
+									<td>Conteúdo da janela</td>
+									<td>SIM</td>
+								</tr>
+								<tr>
+									<td>placeholder</td>
+									<td>string</td>
+									<td>Valor padrão</td>
+									<td>SIM</td>
+								</tr>
+								<tr>
+									<td>_titulo</td>
+									<td>string</td>
+									<td>
+										Título da janela.
+										<br />
+										Se deixado em branco, assume
+										<span class = "texto">"Inserindo dados"</span>.
+									</td>
+									<td>SIM</td>
+								</tr>
+								<tr>
+									<td>cancelar</td>
+									<td>booleano</td>
+									<td>
+										Verdadeiro caso se deseje na janela, além do botão Ok, um botão Cancelar; falso caso contrário.
+										<br />
+										Se verdadeiro, também adicionará um botão fechar ao cabeçalho.
+									</td>
+									<td>SIM</td>
+								</tr>
+								<tr>
+									<td>validar</td>
+									<td>função</td>
+									<td>Função que obrigatoriamente retorna um booleano verdadeiro quando o valor for válido e falso caso contrário.</td>
+									<td>SIM</td>
+								</tr>
+								<tr>
+									<td>callback</td>
+									<td>função</td>
+									<td>
+										Função que é executada ao se clicar no botão Ok.
+										<br />
+										Se o resultado da função no parâmetro
+										<span class = "parametro">validar</span>
+										for verdadeiro, retorna como parâmetro o que foi digitado no campo de texto.
+									</td>
+									<td>SIM</td>
+								</tr>
+								<tr>
+									<td>padrao</td>
+									<td>inteiro</td>
+									<td>
+										Índice do botão padrão da janela.
+										<br />
+										É um inteiro entre 0 e 1 caso haja o botão Cancelar ou igual a 0 caso não haja.
+										<br />
+										Tem sua função descrita no atributo
+										<span class = "atributo">botaoPadrao</span>
+										documentado no
+										<a href = "#item41" class = "repo_link2">item 4.1</a>.
+										<br />
+										Se não definido, assume
+										<span class = "numero">0</span>.
+									</td>
+									<td>NÃO</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class = "codigo-inline">
+							Por definição, independentemente das preferências definidas no arquivo
+							<span class = "arquivo">janelaPersonalizada2.0_pref.js</span>, as janelas criadas pela função
+							<div>
+								<span class = "variavel">JP</span><span>.</span><span class = "categoria">criar</span><span>.</span><span class = "lib_funcao">confirma</span><span>(</span><span class = "parametro">_conteudo</span><span>,&nbsp;</span><span class = "parametro">_titulo</span><span>,&nbsp;</span><span class = "parametro">cancelar</span><span>,&nbsp;</span><span class = "parametro">callback</span><span>,&nbsp;</span><span class = "parametro">padrao</span><span>)</span>
+							</div>
+						</div>
+						<ul>
+							<li>não podem ser e não iniciam como maximizadas;</li>
+							<li>
+								podem ser fechadas com o teclado se o parâmetro
+								<span class = "parametro">cancelar</span> for verdadeiro, mas nunca com o mouse (ver atributo
+								<span class = "atributo">config</span><span>.</span><span class = "atributo">fechar</span>
+								do
+								<a href = "#item41" class = "repo_link2">item 4.1</a>);
+							</li>
+						</ul>
+						<p>
+							Para alterar essas propriedades, será necessário trocar na instalação o arquivo
+							<span class = "arquivo">janelaPersonalizada2.0_main_mini.js</span>
+							por sua contraparte não-minificada,
+							<span class = "arquivo">janelaPersonalizada2.0_main.js</span>,
+							e alterá-las manualmente, mas isso não é recomendado.
+						</p>
+						<p>
+							O botão ao lado cria um prompt:
+							<button onclick = "exemplo43114()">Exemplo</button>
+						</p>
+						<details>
+							<summary>Ver código</summary>
+							<div class = "codigo">
+								<div>
+									<p>
+										<span class = "variavel">JP</span>.<span class = "categoria">criar</span>.<span class = "lib_funcao">prompt</span>(<span class = "texto">"Qual a idade?"</span>,
+										<span class = "texto">"12"</span>,
+										<span class = "texto">""</span>,
+										<span class = "booleano">false</span>,
+										<span class = "JavaScript_reservado">function</span>(<span class = "parametro">val</span>) {
+									</p>
+									<p class = "nivel1">
+										<span class = "JavaScript_reservado">return</span>
+										<span class = "variavel">val</span>
+										==
+										<span class = "JavaScript_funcao">parseInt</span>(<span class = "variavel">val</span>);
+										<span class = "comentario">// Aceita apenas números inteiros
+									</p>
+									<p>
+										},
+										<span class = "JavaScript_reservado">function</span>(<span class = "parametro">resp</span>) {
+									</p>
+									<p class = "nivel1">
+										<span class = "variavel">JP</span>.<span class = "categoria">criar</span>.<span class = "lib_funcao">alerta</span>(<span class = "texto">"O ano de nascimento é "</span>
+										+
+										(<span class = "numero">2023</span>
+										-
+										<span class = "JavaScript_funcao">parseInt</span>(<span class = "variavel">resp</span>)));
+									</p>
+									<p>
+										});
+									</p>
+								<div>
+							</div>
+						</details>
+						<hr />
+						<p>
+							<b>
+								<a name = "item4312">4.3.1.2. Módulo alterar</a>
+							</b>
+						</p>
+						<p>
+							<i>
+								<a name = "item43121">4.3.1.2.1. Função editar</a>
+							</i>
+						</p>
+						<p>Edita uma janela aberta.</p>
+						<table class = "explicacao_menu w100" border = 1>
+							<thead>
+								<tr>
+									<th>Parâmetro</th>
+									<th>Tipo</th>
+									<th>Descrição</th>
+									<th>Obrigatório</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>id</td>
+									<td>string</td>
+									<td>
+										Identificador de uma janela aberta.
+										<br />
+										Os identificadores (ver
+										<a class = "repo_link2" href = "#item43111">item 4.3.1.1.1</a>)
+										são obtidos através da função
+										<span class = "lib_funcao">id</span><span>()</span>.
+									</td>
+									<td>SIM</td>
+								</tr> 
+								<tr> 
+									<td>obj</td>
+									<td>objeto</td>
+									<td>
+										Objeto estruturado de acordo com o descrito no
+										<a class = "repo_link2" href = "#item41">item 4.1</a>.
+									</td>
+									<td>SIM</td>
+								</tr>
+							</tbody>
+						</table>
+						<p>
+							Um exemplo de uso dessa função está disponível no item
+							<a class = "repo_link2" href = "#item43141">4.3.1.4.1</a>.
+						</p>
+						<p>
+							<i>
+								<a name = "item43122">4.3.1.2.2. Função limparEdicoes</a>
+							</i>
+						</p>
+						<p>Desfaz irreversivelmente as edições de uma janela aberta.</p>
+						<table class = "explicacao_menu w100" border = 1>
+							<thead>
+								<tr>
+									<th>Parâmetro</th>
+									<th>Tipo</th>
+									<th>Descrição</th>
+									<th>Obrigatório</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>id</td>
+									<td>string</td>
+									<td>
+										Identificador de uma janela aberta.
+										<br />
+										Os identificadores (ver
+										<a class = "repo_link2" href = "#item43111">item 4.3.1.1.1</a>)
+										são obtidos através da função
+										<span class = "lib_funcao">id</span><span>()</span>.
+									</td>
+									<td>SIM</td>
+								</tr> 
+								<tr> 
+									<td>qtd</td>
+									<td>inteiro</td>
+									<td>
+										Quantidade de edições a serem desfeitas, ordenadas a partir da última.
+										<br />
+										Se não definido, desfará todas as edições.
+									</td>
+									<td>NÃO</td>
+								</tr>
+							</tbody>
+						</table>
+						<p>
+							<i>
+								<a name = "item43123">4.3.1.2.3. Função botaoOnOff</a>
+							</i>
+						</p>
+						<p>
+							Ativa ou desativa botões de uma janela aberta.
+							O botão não pode ser o botão padrão da janela (ver atributo
+							<span class = "atributo">botaoPadrao</span>
+							do
+							<a class = "repo_link2" href = "#item41">item 4.1</a>).
+						</p>
+						<table class = "explicacao_menu w100" border = 1>
+							<thead>
+								<tr>
+									<th>Parâmetro</th>
+									<th>Tipo</th>
+									<th>Descrição</th>
+									<th>Obrigatório</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>id</td>
+									<td>string</td>
+									<td>
+										Identificador de uma janela aberta.
+										<br />
+										Os identificadores (ver
+										<a class = "repo_link2" href = "#item43111">item 4.3.1.1.1</a>)
+										são obtidos através da função
+										<span class = "lib_funcao">id</span><span>()</span>.
+									</td>
+									<td>SIM</td>
+								</tr> 
+								<tr> 
+									<td>btn</td>
+									<td>string ou inteiro</td>
+									<td>
+										Identificador de um botão.
+										<br />
+										Caso string, deve ser igual ao nome do botão, por exemplo,
+										<span class = "texto">"Ok"</span>.
+										<br />
+										Caso inteiro, deve ser um inteiro de 0 à quantidade de botoes da janela.
+									</td>
+									<td>SIM</td>
+								</tr>
+								<tr> 
+									<td>ativar</td>
+									<td>booleano</td>
+									<td>
+										Verdadeiro caso se deseje ativar o botão, falso caso contrário.
+										<br />
+										Se não definido, inativará caso ativo e ativará caso inativo.
+									</td>
+									<td>NÃO</td>
+								</tr>
+							</tbody>
+						</table>
+						<p>
+							Um exemplo de uso dessa função está disponível no
+							<a class = "repo_link2" href = "#item43141">item 4.3.1.4.1</a>.
+						</p>
+						<hr />
+						<p>
+							<b>
+								<a name = "item4313">4.3.1.3. Módulo manutencao</a>
+							</b>
+						</p>
+						<p>
+							<i>
+								<a name = "item43131">4.3.1.3.1. Função maxmin</a>
+							</i>
+						</p>
+						<p>Maximiza ou restaura uma janela.</p>
+						<table class = "explicacao_menu w100" border = 1>
+							<thead>
+								<tr>
+									<th>Parâmetro</th>
+									<th>Tipo</th>
+									<th>Descrição</th>
+									<th>Obrigatório</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>id</td>
+									<td>string</td>
+									<td>
+										Identificador de uma janela aberta.
+										<br />
+										Os identificadores (ver
+										<a class = "repo_link2" href = "#item43111">item 4.3.1.1.1</a>)
+										são obtidos através da função
+										<span class = "lib_funcao">id</span><span>()</span>.
+									</td>
+									<td>SIM</td>
+								</tr> 
+								<tr> 
+									<td>maximizado</td>
+									<td>booleano</td>
+									<td>
+										Verdadeiro caso se deseje maximizar a janela, falso caso contrário.
+										<br />
+										Se não definido, maximizará caso restaurada e restaurará caso maximizada.
+									</td>
+									<td>NÃO</td>
+								</tr>
+							</tbody>
+						</table>
+						<p>
+							<i>
+								<a name = "item43132">4.3.1.3.2. Função ativar</a>
+							</i>
+						</p>
+						<p>Ativa uma janela.</p>
+						<table class = "explicacao_menu w100" border = 1>
+							<thead>
+								<tr>
+									<th>Parâmetro</th>
+									<th>Tipo</th>
+									<th>Descrição</th>
+									<th>Obrigatório</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>id</td>
+									<td>string</td>
+									<td>
+										Identificador de uma janela aberta.
+										<br />
+										Os identificadores (ver
+										<a class = "repo_link2" href = "#item43111">item 4.3.1.1.1</a>)
+										são obtidos através da função
+										<span class = "lib_funcao">id</span><span>()</span>.
+									</td>
+									<td>SIM</td>
+								</tr>
+							</tbody>
+						</table>
+						<p>
+							<i>
+								<a name = "item43133">4.3.1.3.3. Função fechar</a>
+							</i>
+						</p>
+						<p>Fecha uma janela.</p>
+						<table class = "explicacao_menu w100" border = 1>
+							<thead>
+								<tr>
+									<th>Parâmetro</th>
+									<th>Tipo</th>
+									<th>Descrição</th>
+									<th>Obrigatório</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>id</td>
+									<td>string ou constante</td>
+									<td>
+										Caso seja uma string, deverá ser o identificador de uma janela aberta.
+										<br />
+										Os identificadores (ver
+										<a class = "repo_link2" href = "#item43111">item 4.3.1.1.1</a>)
+										são obtidos através da função
+										<span class = "lib_funcao">id</span><span>()</span>.
+										<br />
+										Se não definido, fechará a última janela ativa e, se esta também não estiver definida, resultará em erro.
+									</td>
+									<td>NÃO</td>
+								</tr>
+							</tbody>
+						</table>
+						<p>
+							O parâmetro
+							<span class = "parametro">id</span>
+							pode ainda ser igual a uma constante,
+							<span class = "variavel">JP_evitaCallback</span>.
+							Nesse caso, a função fechará a última janela ativa sem executar a função que definida no botão fechar, caso exista.
+						</p>
+						<p>
+							<i>
+								<a name = "item43134">4.3.1.3.4. Função reabrir</a>
+							</i>
+						</p>
+						<p>Reabre uma janela.</p>
+						<table class = "explicacao_menu w100" border = 1>
+							<thead>
+								<tr>
+									<th>Parâmetro</th>
+									<th>Tipo</th>
+									<th>Descrição</th>
+									<th>Obrigatório</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>id</td>
+									<td>string</td>
+									<td>
+										Identificador de uma janela.
+										<br />
+										Os identificadores (ver
+										<a class = "repo_link2" href = "#item43111">item 4.3.1.1.1</a>)
+										são obtidos através da função
+										<span class = "lib_funcao">id</span><span>()</span>.
+									</td>
+									<td>SIM</td>
+								</tr>
+							</tbody>
+						</table>
+						<hr />
+						<p>
+							<b>
+								<a name = "item4314">4.3.1.4. Módulo recursos</a>
+							</b>
+						</p>
+						<p>Todas as funções dessse módulo retornam utilidades.</p>
+						<p>
+							<i>
+								<a name = "item43141">4.3.1.4.1. Função botaoPadrao</a>
+							</i>
+						</p>
+						<p>Retorna um objeto.</p>
+						<div class = "codigo-inline">
+							A função
+							<div>
+								<span class = "variavel">JP</span><span>.</span><span class = "categoria">recursos</span><span>.</span><span class = "lib_funcao">botaoPadrao</span><span>()</span>
+							</div>
+							retorna as propriedades do primeiro botão declarado no arquivo
+							<span class = "arquivo">janelaPersonalizada2.0_pref.js</span>.
+							Isto é útil porque, como a declaração de todos os atributos é obrigatória ao se criar um botão, essa função poupa linhas caso somente uma propriedade (geralmente, o atributo
+							<span class = "atributo">funcao</span>) seja alterada.
+						</div>
+						<div class = "codigo-inline">
+							O botão ao lado utiliza
+							<div>
+								<span class = "variavel">JP</span><span>.</span><span class = "categoria">recursos</span><span>.</span><span class = "lib_funcao">botaoPadrao</span><span>()</span>
+							</div>
+							para atribuir uma função diferente ao botão da janela:
+							<button onclick = "exemplo43141()">Exemplo</button>
+						</div>
+						<details>
+							<summary>Ver código</summary>
+							<div class = "codigo">
+								<div>
+									<p>
+										<span class = "JavaScript_reservado">let</span>
+										<span class = "variavel">janExemplo</span>;
+									</p>
+									<p>
+										<span class = "JavaScript_reservado">function</span>
+										<span class = "funcao">exemplo</span>()
+										{
+									</p>
+									<p class = "nivel1">
+										<span class = "JavaScript_reservado">let</span>
+										<span class = "variavel">botao</span>
+										=
+										<span class = "variavel">JP</span>.<span class = "categoria">recursos</span>.<span class = "lib_funcao">botaoPadrao</span>();
+									</p>
+									<p class = "nivel1">
+										<span class = "comentario">/*</span>
+									</p>
+									<p class = "nivel1">
+										<span class = "comentario">O botão dessa janela terá o atributo letra igual a -1,</span>
+									</p>
+									<p class = "nivel1">
+										<span class = "comentario">o atributo descr igual a "" e o atributo ativo igual a true,</span>
+									</p>
+									<p class = "nivel1">
+										<span class = "comentario">como definido no arquivo janelaPersonalizada2.0_pref.js.</span>
+									</p>
+									<p class = "nivel1">
+										<span class = "comentario">*/</span>
+									</p>
+									<p class = "nivel1">
+										<span class = "variavel">botao</span>.<span class = "atributo">funcao</span>
+										=
+										<span class = "JavaScript_reservado">function</span>()
+										{
+									</p>
+									<p class = "nivel2">
+										<span class = "JavaScript_reservado">const</span>
+										<span class = "variavel">id</span>
+										=
+										<span class = "variavel">janExemplo</span>.<span class = "categoria">get</span>.<span class = "lib_funcao">id</span>();
+										<span class = "comentario">// Obtém o id dessa janela para operações
+									</p>
+									<p class = "nivel2">
+										<span class = "variavel">JP</span>.<span class = "categoria">alterar</span>.<span class = "lib_funcao">editar</span>(<span class = "parametro">id</span>,
+										{
+									</p>
+									<p class = "nivel3">
+										<span class = "atributo">estilo</span>
+										: {
+									</p>
+									<p class = "nivel4">
+										<span class = "atributo">posicao</span>
+										: {
+									</p>
+									<p class = "nivel5">
+										<span class = "atributo">vertical</span>
+										:
+										<span class = "texto">"acima"</span>
+									</p>
+									<p class = "nivel4">
+										}
+									</p>
+									<p class = "nivel3">
+										}
+									</p>
+									<p class = "nivel2">
+										});
+									</p>
+									<p class = "nivel2">
+										<span class = "variavel">JP</span>.<span class = "categoria">alterar</span>.<span class = "lib_funcao">botaoOnOff</span>(<span class = "parametro">id</span>,
+										<span class = "parametro">0</span>);
+										<span class = "comentario">// Desativa o botão</span>
+									</p>
+									<p class = "nivel1">
+										};
+									</p>
+									<p class = "nivel1">
+										<span class = "variavel">janExemplo</span>
+										=
+										<span class = "variavel">JP</span>.<span class = "categoria">criar</span>.<span class = "lib_funcao">principal</span>({
+									</p>
+									<p class = "nivel2">
+										<span class = "atributo">conteudo</span>
+										: {
+									</p>
+									<p class = "nivel3">
+										<span class = "atributo">cabecalho</span>
+										: {
+									</p>
+									<p class = "nivel4">
+										<span class = "atributo">titulo</span>
+										:
+										<span class = "texto">"Exemplo"</span>,
+									</p>
+									<p class = "nivel4">
+										<span class = "atributo">botoes</span>
+										: {
+									</p>
+									<p class = "nivel5">
+										<span class = "atributo">maximizar</span>
+										:
+										<span class = "booleano">false</span>,
+									</p>
+									<p class = "nivel5">
+										<span class = "atributo">fechar</span>
+										:
+										<span class = "JavaScript_reservado">function</span>()
+										{ }
+									</p>
+									<p class = "nivel4">
+										}
+									</p>
+									<p class = "nivel3">
+										},
+									</p>
+									<p class = "nivel3">
+										<span class = "atributo">corpo</span>
+										:
+										<span class = "texto">"&#60;p&#62;Essa janela tem um botão baseado em um botão padrão&#60;p&#62;"</span>,
+									</p>
+									<p class = "nivel3">
+										<span class = "atributo">botoes</span>
+										: [
+									</p>
+									<p class = "nivel4">
+										{
+									</p>
+									<p class = "nivel5">
+										<span class = "texto">"Subir"</span>
+										:
+										<span class = "variavel">botao</span>
+									</p>
+									<p class = "nivel4">
+										}
+									</p>
+									<p class = "nivel3">
+										]
+									</p>
+									<p class = "nivel2">
+										}
+									</p>
+									<p class = "nivel1">
+										}
+									</p>
+									<p>
+										}
+									</p>
+								</div>
+							</div>
+						</details>
+						<p>
+							<i>
+								<a name = "item43142">4.3.1.4.2. Função obterUltimo</a>
+							</i>
+						</p>
+						<p>Retorna uma string com o id da última janela ativa ou aberta. Útil para comparações.</p>
+						<table class = "explicacao_menu w100" border = 1>
+							<thead>
+								<tr>
+									<th>Parâmetro</th>
+									<th>Tipo</th>
+									<th>Descrição</th>
+									<th>Obrigatório</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>tipo</td>
+									<td>string</td>
+									<td>
+										Se igual a
+										<span class = "texto">"aberto"</span>,
+										a retornará o id da última janela aberta.
+										<br />
+										Se igual a
+										<span class = "texto">"ativo"</span>,
+										a retornará o id da janela ativa.
+										<br />
+										Se diferente de ambos, causará erro.
+									</td>
+									<td>SIM</td>
+								</tr>
+							</tbody>
+						</table>
+						<p>
+							<i>
+								<a name = "item43143">4.3.1.4.3. Função zIndex</a>
+							</i>
+						</p>
+						<p>
+							Retorna um inteiro com a propriedade
+							<span class = "atributo">z-index</span>
+							de uma janela.
+						</p>
+						<table class = "explicacao_menu w100" border = 1>
+							<thead>
+								<tr>
+									<th>Parâmetro</th>
+									<th>Tipo</th>
+									<th>Descrição</th>
+									<th>Obrigatório</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>id</td>
+									<td>string</td>
+									<td>
+										Identificador de uma janela aberta.
+										<br />
+										Os identificadores (ver
+										<a class = "repo_link2" href = "#item43111">item 4.3.1.1.1</a>)
+										são obtidos através da função
+										<span class = "lib_funcao">id</span><span>()</span>.
+									</td>
+									<td>SIM</td>
+								</tr>
+							</tbody>
+						</table>
+						<p>
+							<i>
+								<a name = "item43144">4.3.1.4.4. Função maxmin</a>
+							</i>
+						</p>
+						<div class = "codigo-inline">
+							A função
+							<div>
+								<span class = "variavel">JP</span><span>.</span><span class = "categoria">recursos</span><span>.</span><span class = "lib_funcao">maxmin</span><span>(</span><span class = "parametro">id</span><span>)</span>
+							</div>
+							(não confundir com a função
+							<div>
+								<span class = "variavel">JP</span><span>.</span><span class = "categoria">manutencao</span><span>.</span><span class = "lib_funcao">maxmin</span><span>(</span><span class = "parametro">id</span><span>,&nbsp;</span><span class = "parametro">maxmizado</span><span>)</span>
+							</div>
+							[ver
+							<a class = "repo_link2" href = "#item43131">item 4.3.1.3.1</a>])
+							retorna um booleano que é verdadeiro caso a janela referida esteja maxmizada e falso caso não esteja.
+						</div>
+						<table class = "explicacao_menu w100" border = 1>
+							<thead>
+								<tr>
+									<th>Parâmetro</th>
+									<th>Tipo</th>
+									<th>Descrição</th>
+									<th>Obrigatório</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>id</td>
+									<td>string</td>
+									<td>
+										Identificador de uma janela aberta.
+										<br />
+										Os identificadores (ver
+										<a class = "repo_link2" href = "#item43111">item 4.3.1.1.1</a>)
+										são obtidos através da função
+										<span class = "lib_funcao">id</span><span>()</span>.
+									</td>
+									<td>SIM</td>
+								</tr>
+							</tbody>
+						</table>
+						<h3>
+							<i>
+								<a name = "item432">4.3.2. Objeto das janelas</a>
+							</i>
+						</h3>
+						<p>
+							Como previamente mencionado, todas as funções do módulo
+							<span class = "categoria">criar</span>
+							(ver
+							<a class = "repo_link2" href = "#item4311">item 4.3.1.1</a>)
+							retornam um objeto. Esse objeto não possui propriedades públicas, mas tem seus próprios módulos que, por sua vez,
+							chamam funções análogas às do objeto
+							<span class = "variavel">JP</span>.
+							Por fazerem referência à uma janela específica, essas funções análogas dispensam o uso do parâmetro
+							<span class = "parametro">id</span>.
+						</p>
+						<p>
+							Note-se, ainda, que nenhuma dessas funções pode ser usada na mesma função que criou a janela.
+							Nesses casos, dever-se-á utilizar as funções dos módulos procedurais (ver
+							<a class = "repo_link2" href = "#item431">item 4.3.1</a>).
+						</p>
+						<p>
+							<b>
+								<a name = "item4321">4.3.2.1. Módulo get</a>
+							</b>
+						</p>
+						<p>Todas as funções dessse módulo retornam informações sobre a janela.</p>
+						<p>
+							<i>
+								<a name = "item43211">4.3.2.1.1. Função id</a>
+							</i>
+						</p>
+						<p>
+							Retorna uma string com o identificador (ver
+							<a class = "repo_link2" href = "#item43111">item 4.3.1.1.1</a>)
+							da janela.
+						</p>
+						<p>Não possui parâmetros.</p>
+						<p>
+							Um exemplo de uso dessa função está disponível no
+							<a class = "repo_link2" href = "#item43141">item 4.3.1.4.1</a>.
+						</p>
+						<p>
+							<i>
+								<a name = "item43212">4.3.2.1.2. Função zIndex</a>
+							</i>
+						</p>
+						<p>
+							Análoga à função abordada no
+							<a class = "repo_link2" href = "#item43143">item 4.3.1.4.3</a>.
+						</p>
+						<p>Não possui parâmetros.</p>
+						<p>
+							<i>
+								<a name = "item43213">4.3.2.1.3. Função maxmin</a>
+							</i>
+						</p>
+						<p>
+							Análoga à função abordada no
+							<a class = "repo_link2" href = "#item43144">item 4.3.1.4.4</a>.
+						</p>
+						<p>Não possui parâmetros.</p>
+						<hr />
+						<p>
+							<b>
+								<a name = "item4322">4.3.2.2. Módulo set</a>
+							</b>
+						</p>
+						<p>Todas as funções dessse módulo modificam a janela.</p>
+						<p>
+							<i>
+								<a name = "item43221">4.3.2.2.1. Função editar</a>
+							</i>
+						</p>
+						<p>
+							Análoga à função abordada no
+							<a class = "repo_link2" href = "#item43121">item 4.3.1.2.1</a>.
+						</p>
+						<table class = "explicacao_menu w100" border = 1>
+							<thead>
+								<tr>
+									<th>Parâmetro</th>
+									<th>Tipo</th>
+									<th>Descrição</th>
+									<th>Obrigatório</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr> 
+									<td>obj</td>
+									<td>objeto</td>
+									<td>
+										Objeto estruturado de acordo com o descrito no
+										<a class = "repo_link2" href = "#item41">item 4.1</a>.
+									</td>
+									<td>SIM</td>
+								</tr>
+							</tbody>
+						</table>
+						<p>
+							<i>
+								<a name = "item43222">4.3.2.2.2. Função limparEdicoes</a>
+							</i>
+						</p>
+						<p>Análoga à função abordada no item 4.3.1.2.2.</p>
+						<table class = "explicacao_menu w100" border = 1>
+							<thead>
+								<tr>
+									<th>Parâmetro</th>
+									<th>Tipo</th>
+									<th>Descrição</th>
+									<th>Obrigatório</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr> 
+									<td>qtd</td>
+									<td>inteiro</td>
+									<td>
+										Quantidade de edições a serem desfeitas, ordenadas a partir da última.
+										<br />
+										Se não definido, desfará todas as edições.
+									</td>
+									<td>NÃO</td>
+								</tr>
+							</tbody>
+						</table>
+						<p>
+							<i>
+								<a name = "item43223">4.3.2.2.3. Função botaoOnOff</a>
+							</i>
+						</p>
+						<p>
+							Análoga à função abordada no
+							<a class = "repo_link2" href = "#item43123">item 4.3.1.2.3</a>.
+						</p>
+						<table class = "explicacao_menu w100" border = 1>
+							<thead>
+								<tr>
+									<th>Parâmetro</th>
+									<th>Tipo</th>
+									<th>Descrição</th>
+									<th>Obrigatório</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr> 
+									<td>btn</td>
+									<td>string ou inteiro</td>
+									<td>
+										Identificador de um botão.
+										<br />
+										Caso string, deve ser igual ao nome do botão, por exemplo,
+										<span class = "texto">"Ok"</span>.
+										<br />
+										Caso inteiro, deve ser um inteiro de 0 à quantidade de botoes da janela.
+									</td>
+									<td>SIM</td>
+								</tr>
+								<tr> 
+									<td>ativar</td>
+									<td>booleano</td>
+									<td>
+										Verdadeiro caso se deseje ativar o botão, falso caso contrário.
+										<br />
+										Se não definido, inativará caso ativo e ativará caso inativo.
+									</td>
+									<td>NÃO</td>
+								</tr>
+							</tbody>
+						</table>
+						<p>
+							<i>
+								<a name = "item43224">4.3.2.2.4. Função maxmin</a>
+							</i>
+						</p>
+						<p>
+							Análoga à função abordada no
+							<a class = "repo_link2" href = "#item43131">item 4.3.1.3.1</a>.
+						</p>
+						<table class = "explicacao_menu w100" border = 1>
+							<thead>
+								<tr>
+									<th>Parâmetro</th>
+									<th>Tipo</th>
+									<th>Descrição</th>
+									<th>Obrigatório</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr> 
+									<td>maximizado</td>
+									<td>booleano</td>
+									<td>
+										Verdadeiro caso se deseje maximizar a janela, falso caso contrário.
+										<br />
+										Se não definido, maximizará caso restaurada e restaurará caso maximizada.
+									</td>
+									<td>NÃO</td>
+								</tr>
+							</tbody>
+						</table>
+						<p>
+							<i>
+								<a name = "item43225">4.3.2.2.5. Função ativar</a>
+							</i>
+						</p>
+						<p>
+							Análoga à função abordada no
+							<a class = "repo_link2" href = "#item43132">item 4.3.1.3.2</a>.
+						</p>
+						<p>Não possui parâmetros.</p>
+						<p>
+							<i>
+								<a name = "item43226">4.3.2.2.6. Função fechar</a>
+							</i>
+						</p>
+						<p>
+							Análoga à função abordada no
+							<a class = "repo_link2" href = "#item43133">item 4.3.1.3.3</a>.
+						</p>
+						<p>Não possui parâmetros.</p>
+						<p>
+							<i>
+								<a name = "item43227">4.3.2.2.7. Função reabrir</a>
+							</i>
+						</p>
+						<p>
+							Análoga à função abordada no
+							<a class = "repo_link2" href = "#item43134">item 4.3.1.3.4</a>.
+						</p>
+						<p>Não possui parâmetros.</p>
+					</div>
+					<hr />
+					<div class = "bloco">
+						<h1>
+							<a name = "item5">5. Palavras reservadas</a>
+						</h1>
+						<p>Essa biblioteca reserva para si as palavras-chave:</p>
+						<ul class = "reservadas">
+							<li>
+								<b>Como classe CSS:</b>
+								<ul>
+									<li>janela</li>
+								</ul>
+							</li>
+							<li>
+								<b>Como classe JavaScript:</b>
+								<ul>
+									<li>Janelas</li>
+								</ul>
+							</li>
+							<li>
+								<b>Como constantes globais:</b>
+								<ul>
+									<li>JP_pai</li>
+									<li>JP_evitaCallback</li>
+								</ul>
+							</li>
+							<li>
+								<b>Como variáveis globais:</b>
+								<ul>
+									<li>JP</li>
+									<li>JP_mult</li>
+								</ul>
+							</li>
+						</ul>
+						<p>E reescreve as funções:</p>
+						<ul>
+							<li>
+								<b>window.onkeydown</b>
+							</li>
+							<li>
+								<b>window.onkeyup</b>
+							</li>
+							<li>
+								<b>window.onclick</b>
+							</li>
+							<li>
+								<b>window.onresize</b>
+							</li>
+							<li>
+								<b>window.onload</b>
+							</li>
+						</ul>
+					</div>
+					<hr />
+					<div class = "bloco">
+						<h1>
+							<a name = "item6">6. Alterações</a>
+						</h1>
+						<ul>
+							<li>Mudança na proposta da biblioteca</li>
+							<li>Correção de numerosos erros de gravação e dimensionamento</li>
+							<li>Redução no uso de memória</li>
+							<li>Inclusão de novas propriedades de estilo</li>
+							<li>Diminuição no número de palavras reservadas</li>
+						</ul>
+					</div>
+					<hr />
+					<div class = "bloco" style = "margin-bottom:0">
+						<h1>
+							<a name = "item7">7. Agradecimentos</a>
+						</h1>
+						<a href="https://github.com/khang-nd" class="repo_link" target="_blank">@khang-nd</a>
+						pela biblioteca
+						<a href="https://github.com/khang-nd/7.css" class="repo_link" target="_blank">7.css</a>,
+						na qual se baseia a aparência da presente biblioteca.
+					</div>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
