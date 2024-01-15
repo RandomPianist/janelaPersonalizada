@@ -472,36 +472,6 @@ const Janelas = function() {
 			validarJanela(id, "conhecer informações de", false, false);
 			return full.indexOf(idOuUltimo(id)) > -1;
 		}
-
-		this.salvarPorId = function(ids) {
-			let erro = false;
-			let retorno = false;
-			let json = new Array();
-			if (ids !== undefined) {
-				if (ids.constructor !== Array) ids = [ids];
-				ids.forEach((id) => {
-					if (!erro) erro = !validarParam("ids", id, "string", false, false, false);
-				});
-				if (!erro) {
-					const ultimoAtivo = that.recursos.obterUltimo("ativo");
-					ids.forEach((id) => {
-						let lista = document.querySelectorAll("#" + ultimoAtivo + " #" + id);
-						if (!lista.length) {
-							var errado = id;
-							erro = true;
-						} else if (!erro && id.indexOf(ultimoAtivo) !== 0) {
-							json[id] = {
-								value   : lista[0].value,
-								checked : lista[0].checked
-							}
-						}
-					});
-					if (erro) console.error('O elemento "#' + ultimoAtivo + " #" + errado + '" não existe');
-					else retorno = that2.salvarPorValor(json);
-				}
-			} else console.error('O parâmetro "ids" deve ser do tipo string ou Array');
-			return retorno;
-		}
 	}
 
 	const Controle = function() {
