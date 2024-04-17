@@ -1125,8 +1125,13 @@ const Janelas = function() {
 			"top  : calc(" + (top  * 10) + "% " + sinalTop  + " " + (altura / 2)  + "px);" +
 			"left : calc(" + (left * 10) + "% " + sinalLeft + " " + (largura / 2) + "px)" +
 		"}";
-		if (style) estilo.innerHTML += resultado;
-		else estilo.innerHTML = resultado;
+		if (style) {
+			estilo.innerHTML += resultado;
+			for (x in controle_lista) {
+				let el = document.getElementById("JP-mov-" + x);
+				if (el !== null) el.innerHTML = "";
+			}
+		} else estilo.innerHTML = resultado;
 	}
 
 	const redimensionar = function(id, parar) {
