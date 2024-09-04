@@ -1,6 +1,6 @@
 /*
-JANELA PERSONALIZADA 2.0 © 2023
-Desenvolvido por Reynolds Costa, no Notepad++
+JANELA PERSONALIZADA 2.1 © 2022-2024
+Desenvolvido por Reynolds Costa
 
 O uso é permitido; a comercialização, proibida.
 */
@@ -70,7 +70,7 @@ function exemplo43113() {
 
 function exemplo43114() {
 	JP.criar.prompt("Qual a idade?", "12", "", false, function(val) {
-		return val == parseInt(val); // Aceita apenas números inteiros
+		return val != parseInt(val) ? "Valor inválido" : ""; // Aceita apenas números inteiros
 	}, function(resp) {
 		JP.criar.alerta("O ano de nascimento é " + (2023 - parseInt(resp)));
 	});

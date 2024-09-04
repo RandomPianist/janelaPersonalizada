@@ -1,19 +1,19 @@
 <!--
-JANELA PERSONALIZADA 2.0 © 2023
-Desenvolvido por Reynolds Costa, no Notepad++
+JANELA PERSONALIZADA 2.1 © 2022-2024
+Desenvolvido por Reynolds Costa
 O uso é permitido; a comercialização, proibida.
 -->
 
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8" />
+		<meta charset = "utf-8" />
 		<title>Janela Personalizada</title>
 		<link rel = "stylesheet" type = "text/css" href = "https://randompianist.github.io/documentacao.css" />
-		<link rel = "stylesheet" type = "text/css" href = "css/janelaPersonalizada2.0.css" />
-		<script type = "text/javascript" language = "JavaScript" src = "js/janelaPersonalizada2.0_main_mini.js"></script>
-		<script type = "text/javascript" language = "JavaScript" src = "js/janelaPersonalizada2.0_pref.js"></script>
-		<script type = "text/javascript" language = "JavaScript" src = "js/janelaPersonalizada2.0_func.js"></script>
+		<link rel = "stylesheet" type = "text/css" href = "css/janelaPersonalizada2.1.css" />
+		<script type = "text/javascript" language = "JavaScript" src = "js/janelaPersonalizada2.1_main_mini.js"></script>
+		<script type = "text/javascript" language = "JavaScript" src = "js/janelaPersonalizada2.1_pref.js"></script>
+		<script type = "text/javascript" language = "JavaScript" src = "js/janelaPersonalizada2.1_func.js"></script>
 		<script type = "text/javascript" language = "JavaScript" src = "js/documentacao.js"></script>
 		<script type = "text/javascript" language = "JavaScript" src = "js/exemplo.js"></script>
 		<style type = "text/css">
@@ -55,10 +55,23 @@ O uso é permitido; a comercialização, proibida.
 										<a class = "repo_link" href = "#item42">4.2. Propriedades</a>
 										<ul>
 											<li>
-												<a class = "repo_link" href = "#item421">4.2.1. JP_mult</a>
+												<a class = "repo_link" href = "#item421">4.2.1. De escrita</a>
+												<ul>
+													<li>
+														<a class = "repo_link" href = "#item4211">4.2.1.1. JP_mult</a>
+													</li>
+													<li>
+														<a class = "repo_link" href = "#item4212">4.2.1.2. JP_pai</a>
+													</li>
+												</ul>
 											</li>
 											<li>
-												<a class = "repo_link" href = "#item422">4.2.2. JP_pai</a>
+												<a class = "repo_link" href = "#item422">4.2.2. De leitura</a>
+												<ul>
+													<li>
+														<a class = "repo_link" href = "#item4212">4.2.1.2. lista</a>
+													</li>
+												</ul>
 											</li>
 										</ul>
 									</li>
@@ -186,6 +199,14 @@ O uso é permitido; a comercialização, proibida.
 							</li>
 							<li>
 								<a class = "repo_link" href = "#item6">6. Alterações</a>
+								<ul>
+									<li>
+										<a class = "repo_link" href = "#item61">6.1. De 1.0 para 2.0</a>
+									</li>
+									<li>
+										<a class = "repo_link" href = "#item62">6.2. De 2.0 para 2.1</a>
+									</li>
+								</ul>
 							</li>
 							<li>
 								<a class = "repo_link" href = "#item7">7. Agradecimentos</a>
@@ -883,6 +904,9 @@ O uso é permitido; a comercialização, proibida.
 						<h3 style = "margin-top:10px">
 							<a name = "item42">4.2. Propriedades</a>
 						</h3>
+						<h3 class = "sub">
+							<a name = "item421">4.2.1. De escrita</a>
+						</h3>
 						<p style = "margin-bottom:20px">
 							Além do objeto
 							<span class = "variavel">JP_preferencias</span>,
@@ -894,9 +918,11 @@ O uso é permitido; a comercialização, proibida.
 							<span class = "variavel">JP_pai</span>.
 							Observemos suas definições.
 						</p>
-						<h3 class = "sub">
-							<a name = "item421">4.2.1. JP_mult</a>
-						</h3>
+						<p>
+							<b>
+								<a name = "item4211">4.2.1.1. JP_mult</a>
+							</b>
+						</p>
 						<p>
 							Booleano que, quando verdadeiro, permite que clicar sobre uma janela que esteja atrás na pilha de janelas tome a dianteira sobre suas irmãs.
 							Quando falso, animará ou fechará a primeira janela (para mais detalhes, veja o atributo
@@ -908,9 +934,11 @@ O uso é permitido; a comercialização, proibida.
 							Apesar de não ser uma constante, recomenda-se, para a facilitação no processo de debug, que a alteração dessa propriedade seja feita apenas uma vez e apenas em um lugar: o arquivo
 							<span class = "arquivo">janelaPersonalizada2.0_pref.js</span>.
 						</p>
-						<h3 class = "sub">
-							<a name = "item422">4.2.2. JP_pai</a>
-						</h3>
+						<p>
+							<b>
+								<a name = "item4212">4.2.1.2. JP_pai</a>
+							</b>
+						</p>
 						<p>
 							String que contém o id do elemento que conterá e restringirá as janelas.
 							Caso seja deixada em branco, as janelas poderão ser redimensionadas e movidas por todo o corpo do documento.
@@ -919,6 +947,24 @@ O uso é permitido; a comercialização, proibida.
 							No presente documento, essa propriedade tem o valor
 							<span class = "texto">"principal"</span>,
 							que é o id da coluna desse texto, de modo que nenhuma janela pode ser movida para fora dela, isto é, entrar no menu.
+						</p>
+						<h3 class = "sub">
+							<a name = "item422">4.2.2. De leitura</a>
+						</h3>
+						<p>
+							<b>
+								<a name = "item4221">4.2.1.1. lista</a>
+							</b>
+						</p>
+						<p>
+							O objeto
+							<span class = "variavel">
+								JP
+							</span>
+							possui também um atribuito chamado
+							<span class = "atributo">lista</span>,
+							que é um vetor com todos os objetos de todas as janelas criadas,
+							o que pode ser bastante útil para recuperar informações.
 						</p>
 						<h3>
 							<a name = "item43">4.3. Funções</a>
@@ -1040,7 +1086,7 @@ O uso é permitido; a comercialização, proibida.
 							assumirá o valor
 							<span class = "texto">"janela"</span>.
 							Para obter o nome completo da janela, com o numeral, utilize o objeto retornado quando da sua criação. Para mais detalhes, veja o
-							<a href = "#item4321">item 4.3.2.1</a>.
+							<a href = "#item4321" class = "repo_link2">item 4.3.2.1</a>.
 						</p>
 						<p>
 							Veja essa função em funcionamento:
@@ -1534,7 +1580,7 @@ O uso é permitido; a comercialização, proibida.
 								<tr>
 									<td>validar</td>
 									<td>função</td>
-									<td>Função que obrigatoriamente retorna um booleano verdadeiro quando o valor for válido e falso caso contrário.</td>
+									<td>Função que obrigatoriamente retorna uma string vazia quando o valor for válido e uma contendo o motivo do erro caso contrário.</td>
 									<td>SIM</td>
 								</tr>
 								<tr>
@@ -1611,8 +1657,12 @@ O uso é permitido; a comercialização, proibida.
 									<p class = "nivel1">
 										<span class = "JavaScript_reservado">return</span>
 										<span class = "variavel">val</span>
-										==
-										<span class = "JavaScript_funcao">parseInt</span>(<span class = "variavel">val</span>);
+										!=
+										<span class = "JavaScript_funcao">parseInt</span>(<span class = "variavel">val</span>)
+										?
+										<span class = "texto">"Valor inválido"</span>
+										:
+										<span class = "texto">""</span>;
 										<span class = "comentario">// Aceita apenas números inteiros
 									</p>
 									<p>
@@ -2525,12 +2575,30 @@ O uso é permitido; a comercialização, proibida.
 						<h1>
 							<a name = "item6">6. Alterações</a>
 						</h1>
+						<h3 style = "margin-top:0">
+							<a name = "item61">6.1. De 1.0 para 2.0</a>
+						</h3>
 						<ul>
 							<li>Mudança na proposta da biblioteca</li>
 							<li>Correção de numerosos erros de gravação e dimensionamento</li>
 							<li>Redução no uso de memória</li>
 							<li>Inclusão de novas propriedades de estilo</li>
 							<li>Diminuição no número de palavras reservadas</li>
+						</ul>
+						<h3>
+							<a name = "item62">6.1. De 2.0 para 2.1</a>
+						</h3>
+						<ul>
+							<li>
+								Melhoria na personalização da função
+								<b>prompt</b>
+							</li>
+							<li>Correção de erros na integração com o menu</li>
+							<li>
+								Inclusão da propriedade
+								<b>lista</b>
+							</li>
+							<li>Redução no uso de memória</li>
 						</ul>
 					</div>
 					<hr />

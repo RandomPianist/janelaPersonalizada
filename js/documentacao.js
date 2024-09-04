@@ -1,6 +1,6 @@
 /*
-JANELA PERSONALIZADA 2.0 © 2023
-Desenvolvido por Reynolds Costa, no Notepad++
+JANELA PERSONALIZADA 2.1 © 2022-2024
+Desenvolvido por Reynolds Costa
 
 O uso é permitido; a comercialização, proibida.
 */
