@@ -240,6 +240,12 @@ const Janelas = function() {
 	const Alterar = function() {
 		this.editar = function(id, obj) {
 			if (validarParam("obj", obj, "object", false, false, false) && validarJanela(id, "editar", false, true)) {
+				if (obj.estilo === undefined) {
+					bloquear_visibilidade = true;
+					setTimeout(function() {
+						bloquear_visibilidade = false;
+					}, 400);
+				}
 				let main = validarJSON(obj, that.lista[id].objeto);
 				let el = document.getElementById(id);
 				let ref = that.lista[id];
@@ -589,15 +595,16 @@ const Janelas = function() {
 
 	let offsetX, offsetY;
 
-	let that           = this;
-	let full           = new Array();
-	let botaoTecla     = new Array();
-	let histEdit       = new Array();
-	let histGrava      = true;
-	let alt            = false;
-	let permissaoMouse = true;
-	let avisoPai       = false;
-	let el_ultimoAtivo = null;
+	let that                  = this;
+	let full                  = new Array();
+	let botaoTecla            = new Array();
+	let histEdit              = new Array();
+	let histGrava             = true;
+	let alt                   = false;
+	let permissaoMouse        = true;
+	let avisoPai              = false;
+	let bloquear_visibilidade = false;
+	let el_ultimoAtivo        = null;
 
 	let controle_alerta    = null;
 	let controle_prompt    = null;
@@ -1173,7 +1180,7 @@ const Janelas = function() {
 		const ultima = !cond.max_width && !cond.max_height;
 		estilo.removeProperty("top");
 		estilo.removeProperty("left");
-		estilo.visibility = parar ? "" : "hidden";
+		if (!bloquear_visibilidade) estilo.visibility = parar ? "" : "hidden";
 		if (cond.min_width) estilo.width = ref3[0] + "px";
 		else if (cond.max_width) {
 			if (!cond.left && ((rect.left - 10) > pai.left)) estilo.left = (rect.left - 10) + "px";
