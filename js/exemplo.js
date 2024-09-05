@@ -7,7 +7,7 @@ O uso é permitido; a comercialização, proibida.
 
 // ARQUIVO DE EXEMPLO
 
-function exemplo43111() {
+function exemplo43211() {
 	JP.criar.principal({
 		conteudo : {
 			cabecalho : {
@@ -42,17 +42,17 @@ function exemplo43111() {
 	});
 }
 
-function exemplo43112_1() {
+function exemplo43212_1() {
 	JP.criar.alerta("Olá, mundo!");
 }
 
-function exemplo43112_2() {
+function exemplo43212_2() {
 	JP.criar.alerta("Olá, mundo!", "", function() {
 		console.log("Fui fechado");
 	});
 }
 
-function exemplo43113() {
+function exemplo43213() {
 	JP.criar.confirma("Deseja continuar?", "", true, function(resp) {
 		switch(resp) {
 			case 1:
@@ -68,7 +68,7 @@ function exemplo43113() {
 	});
 }
 
-function exemplo43114() {
+function exemplo43214() {
 	JP.criar.prompt("Qual a idade?", "12", "", false, function(val) {
 		return val != parseInt(val) ? "Valor inválido" : ""; // Aceita apenas números inteiros
 	}, function(resp) {
@@ -77,7 +77,7 @@ function exemplo43114() {
 }
 
 let janExemplo;
-function exemplo43141() {
+function exemplo43241() {
 	let botao = JP.recursos.botaoPadrao();
 	/*
 	O botão dessa janela terá o atributo letra igual a -1,

@@ -39,6 +39,7 @@ const Janelas = function() {
 		}
 
 		this.principal = function(obj) {
+			criando = true;
 			return new Janela(obj);
 		}
 
@@ -246,6 +247,7 @@ const Janelas = function() {
 						bloquear_visibilidade = false;
 					}, 400);
 				}
+				criando = false;
 				let main = validarJSON(obj, that.lista[id].objeto);
 				let el = document.getElementById(id);
 				let ref = that.lista[id];
@@ -259,9 +261,11 @@ const Janelas = function() {
 				else el.classList.remove("is-bright");
 				if (typeof obj.conteudo == "object") {
 					const ref2 = obj.conteudo;
-					if (typeof ref2.cabecalho.titulo == "string") document.querySelector("#" + id + " .title-bar-text").innerHTML = main.conteudo.cabecalho.titulo;
-					if (typeof ref2.corpo            == "string") document.getElementById(id + "-corpo").innerHTML = main.conteudo.corpo;
-					if (typeof ref2.botoes           == "object") document.querySelector("#" + id + " footer").innerHTML = botoesHTML(main.conteudo.botoes, id);
+					if (typeof ref2.cabecalho == "object") {
+						if (typeof ref2.cabecalho.titulo == "string") document.querySelector("#" + id + " .title-bar-text").innerHTML = main.conteudo.cabecalho.titulo;
+					}					
+					if (typeof ref2.corpo  == "string") document.getElementById(id + "-corpo").innerHTML = main.conteudo.corpo;
+					if (typeof ref2.botoes == "object") document.querySelector("#" + id + " footer").innerHTML = botoesHTML(main.conteudo.botoes, id);
 				}
 				let ref2 = main.conteudo.cabecalho.botoes;
 				document.getElementById(id + "-maxmin").style.display = !ref2.maximizar ? "none" : "";
@@ -488,13 +492,13 @@ const Janelas = function() {
 		let trocaAlt = function() {
 			let retorno = false;
 			limparBotao();
-			if (!alt) {
+			if (!that.alt) {
 				const _padrao = that.lista[that.recursos.obterUltimo("ativo")].objeto.conteudo.botaoPadrao;
 				const botoes = sublinhaBotao();
 				if (botoes.indexOf(_padrao) > -1) selecionaBotao(_padrao, true);
 				else if (botoes.length) selecionaBotao(botoes[botoes.length - 1], true);
 			} else retorno = true;
-			alt = !alt;
+			that.alt = !that.alt;
 			return retorno;
 		}
 
@@ -522,7 +526,7 @@ const Janelas = function() {
 
 		this.keyup = function(e) {
 			if (e.keyCode == 27) {
-				if (alt) {
+				if (that.alt) {
 					trocaAlt();
 					return true;
 				}
@@ -553,7 +557,7 @@ const Janelas = function() {
 						else if (indice > ativos[ativos.length - 1]) indice = ativos[0];
 						limparBotao();
 						selecionaBotao(indice, false);
-						if (alt) sublinhaBotao();
+						if (that.alt) sublinhaBotao();
 					} else if (e.keyCode == 18) {
 						if (trocaAlt()) botaoTecla = new Array();
 					}
@@ -600,10 +604,11 @@ const Janelas = function() {
 	let botaoTecla            = new Array();
 	let histEdit              = new Array();
 	let histGrava             = true;
-	let alt                   = false;
 	let permissaoMouse        = true;
 	let avisoPai              = false;
 	let bloquear_visibilidade = false;
+	let impedir_selecao       = false;
+	let criando               = false;
 	let el_ultimoAtivo        = null;
 
 	let controle_alerta    = null;
@@ -611,12 +616,21 @@ const Janelas = function() {
 	let controle_indices   = new Array();
 	let controle_respostas = new Array();
 
+	this.alt        = false;
 	this.lista      = new Array();
 	this.criar      = new Criar();
 	this.alterar    = new Alterar();
 	this.recursos   = new Recursos();
 	this.manutencao = new Manutencao();
 	this._controle  = new Controle();
+
+	this.limparBotao = function() {
+		impedir_selecao = true;
+		limparBotao();
+		setTimeout(function() {
+			impedir_selecao = false;
+		}, 400);
+	}
 
 	setTimeout(function() {
 		elCorpo().innerHTML += "<style type = 'text/css' id = 'JP-estilo'>" +
@@ -856,7 +870,6 @@ const Janelas = function() {
 			if (obj.conteudo.botoes !== undefined) {
 				let erro = false;
 				if (obj.conteudo.botoes.constructor === Array) {
-					let botoes = new Array();
 					obj.conteudo.botoes.forEach((botao) => {
 						if (typeof botao == "object" && !erro) {
 							let ref2 = obterBotao(botao).objeto;
@@ -1106,14 +1119,16 @@ const Janelas = function() {
 				if (obterBotao(botoes[i]).objeto.ativo) ativos.push(i);
 			}
 			if (ativos.indexOf(indice) > -1) {
-				setTimeout(function() {
-					try {
-						ultimoAtivo = that.recursos.obterUltimo("ativo");
-						lUltimoAtivo = that.lista[ultimoAtivo];
-						lUltimoAtivo.sel = indice;
-						document.getElementById(ultimoAtivo + "_btn" + lUltimoAtivo.sel).classList.add("focado");
-					} catch(err) {}
-				}, espera ? 100 : 0);
+				if (!impedir_selecao) {
+					setTimeout(function() {
+						try {
+							ultimoAtivo = that.recursos.obterUltimo("ativo");
+							lUltimoAtivo = that.lista[ultimoAtivo];
+							lUltimoAtivo.sel = indice;
+							document.getElementById(ultimoAtivo + "_btn" + lUltimoAtivo.sel).classList.add("focado");
+						} catch(err) {}
+					}, espera ? 100 : 0);
+				}
 			} else console.error(msgErro + "está ativo.");
 		} else console.error(msgErro + "existe.");
 	}
@@ -1180,7 +1195,7 @@ const Janelas = function() {
 		const ultima = !cond.max_width && !cond.max_height;
 		estilo.removeProperty("top");
 		estilo.removeProperty("left");
-		if (!bloquear_visibilidade) estilo.visibility = parar ? "" : "hidden";
+		estilo.visibility = !bloquear_visibilidade || criando ? parar ? "" : "hidden" : "";
 		if (cond.min_width) estilo.width = ref3[0] + "px";
 		else if (cond.max_width) {
 			if (!cond.left && ((rect.left - 10) > pai.left)) estilo.left = (rect.left - 10) + "px";
